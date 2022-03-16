@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriales &mdash; documentación de Prueba documentacion - </title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Data Access" href="Data_Access.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Prueba documentacion
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Data_Overview.html">Data Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data_Format.html">Data Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data_Access.html">Data Access</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutoriales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#librerias-de-python-a-utilizar">Librerías de Python a utilizar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#descarga-de-los-archivos">Descarga de los archivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lectura-de-los-archivos-descargados">Lectura de los archivos descargados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procesamiento-de-los-pronosticos">Procesamiento de los pronósticos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pronostico-de-temperatura-a-2-m-para-una-latitud-longitud-y-fecha-determinada">Pronóstico de temperatura a 2 m para una latitud, longitud y fecha determinada</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meteograma-de-temperatura-a-2-m-y-precipitacion">Meteograma de temperatura a 2 m y precipitación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapa-de-temperatura-media-diaria-para-una-region">Mapa de temperatura media diaria para una región</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Prueba documentacion</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tutoriales</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Tutoriales.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="tutoriales">
+<h1>Tutoriales<a class="headerlink" href="#tutoriales" title="Enlazar permanentemente con este título"></a></h1>
+<p>Los datos se encuentran disponibles en un repositorio de Amazon Web Service (AWS) en la siguiente dirección <a class="reference external" href="https://direccion_del_repositorio.com">https://direccion_del_repositorio.com</a>. Los datos pueden ser descargados manualmente desde esa dirección, pero también se pueden descargar de manera automática mediante comandos de Python.</p>
+<div class="section" id="librerias-de-python-a-utilizar">
+<h2>Librerías de Python a utilizar<a class="headerlink" href="#librerias-de-python-a-utilizar" title="Enlazar permanentemente con este título"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://s3fs.readthedocs.io/en/latest/"><strong>S3Fs</strong></a></p></li>
+</ul>
+<blockquote>
+<div><p>Librería que permite el acceso y descarga de los datos del repositorio.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://xarray.pydata.org/en/stable/"><strong>xarray</strong></a></p></li>
+</ul>
+<blockquote>
+<div><p>Librería que permite una fácil lectura y procesamiento de los archivos <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</a> en qué están guardados los datos.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/es/3/library/datetime.html"><strong>datetime</strong></a></p></li>
+</ul>
+<blockquote>
+<div><p>Librería para el manejo de fechas.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/"><strong>Matplotlib</strong></a></p></li>
+</ul>
+<blockquote>
+<div><p>Librería para graficar.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/es/3.10/library/os.html"><strong>os</strong></a></p></li>
+</ul>
+<blockquote>
+<div><p>Librería de interfaz con el sistema operativo.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/"><strong>Cartopy</strong></a></p></li>
+</ul>
+<blockquote>
+<div><p>Librería para el procesamiento de datos geográficos.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><a class="reference external" href="https://regionmask.readthedocs.io/en/stable/"><strong>Regionmask</strong></a></p></li>
+</ul>
+<blockquote>
+<div><p>Librería para generar máscaras de zonas geográficas.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!pip install cartopy
+!pip uninstall shapely -y
+!pip install shapely --no-binary shapely
+!pip install regionmask
+!pip install s3fs
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importamos las librerías</span>
+<span class="kn">import</span> <span class="nn">s3fs</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cf</span>
+<span class="kn">import</span> <span class="nn">regionmask</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="descarga-de-los-archivos">
+<h2>Descarga de los archivos<a class="headerlink" href="#descarga-de-los-archivos" title="Enlazar permanentemente con este título"></a></h2>
+<p>Los archivos subidos al repositorio se encuentran dentro de directorios asociados a la fecha y ciclo de inicialización del pronóstico. Por ejemplo, los datos del pronóstico inicializado en 1 de enero de 2022 a las 00Z se encuentran en el directorio 20220101 y, dentro de este, en el directorio 00.</p>
+<p>Las variables disponibles son:</p>
+<ul class="simple">
+<li><p>Temperatura a 2 m (T2) en °C</p></li>
+<li><p>Humedad relativa a 2 m (HR2) en %</p></li>
+<li><p>Magnitud del viento a 10 m (magViento10) en m/s</p></li>
+<li><p>Dirección del viento a 10m (dirViento10) en grados</p></li>
+<li><p>Precipitación horaria acumulada (PP) en mm</p></li>
+<li><p>Temperatura mínima diaria (Tmin) en °C</p></li>
+<li><p>Temperatura máxima diaria (Tmax) en °C</p></li>
+</ul>
+<p>Entre paréntesis se indica el nombre que tiene asignada cada variable en los archivos.</p>
+<p>Los archivos dentro del repositorio se encuentran separados por plazo de pronóstico y por si son datos horarios o integrados a lo largo de un día. Las primeras 5 variables mencionadas tienen frecuencia horaria con lo cual el plazo se corresponde a las horas de pronóstico transcurridas desde la inicialización. En las últimas dos variables, al ser diarias, el plazo representa los días transcurridos desde la inicialización.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Fecha y ciclo para los que se quieren descargar los datos --&gt; SELECCIONAR </span>
+<span class="n">año</span> <span class="o">=</span> <span class="mi">2022</span>
+<span class="n">mes</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">ciclo</span> <span class="o">=</span> <span class="mi">00</span>
+
+
+<span class="c1">#Configuracion para las variables y plazos que se quiere descargar --&gt; SELECCIONAR</span>
+<span class="n">variables_horarias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">,</span> <span class="s1">&#39;HR&#39;</span><span class="p">,</span> <span class="s1">&#39;magViento10&#39;</span><span class="p">,</span> <span class="s1">&#39;dirViento10&#39;</span><span class="p">,</span> <span class="s1">&#39;PP&#39;</span><span class="p">]</span> <span class="c1">#Lista de variables horarias a descargar</span>
+<span class="n">Pi_horarias</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#Plazo inicial para las variables horarias</span>
+<span class="n">Pf_horarias</span> <span class="o">=</span> <span class="mi">72</span> <span class="c1">#Plazo final para las variables horarias</span>
+<span class="n">Int_horarias</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#Intervalo entre plazos para las variables horarias</span>
+
+<span class="n">variables_diarias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tmin&#39;</span><span class="p">,</span> <span class="s1">&#39;Tmax&#39;</span><span class="p">]</span> <span class="c1">#Lista de variables diarias a descargar</span>
+<span class="n">Pi_diarias</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#Plazo inicial para las variables diarias</span>
+<span class="n">Pf_diarias</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#Plazo final para las variables diarias</span>
+<span class="n">Int_diarias</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#Intervalo entre plazos para las variables diarias</span>
+
+<span class="n">DIR_SALIDA</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span> <span class="c1">#Directorio donde se van a guardar los datos descargados --&gt; SELECCIONAR</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plazos de las variables horarias a descargar</span>
+<span class="n">plazos_horarias</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Pi_horarias</span><span class="p">,</span> <span class="n">Pf_horarias</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Int_horarias</span><span class="p">)]</span> 
+
+<span class="c1">#Plazos de las variables diarias a descargar</span>
+<span class="n">plazos_diarias</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Pi_diarias</span><span class="p">,</span> <span class="n">Pf_diarias</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Int_diarias</span><span class="p">)]</span> 
+
+<span class="n">variables_horarias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">,</span> <span class="s1">&#39;PP&#39;</span><span class="p">]</span>
+<span class="n">variables_diarias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tmin&#39;</span><span class="p">]</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:</span><span class="n">variables_horarias</span><span class="p">,</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:</span><span class="n">variables_diarias</span><span class="p">}</span>
+<span class="n">plazos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:</span><span class="n">plazos_horarias</span><span class="p">,</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:</span><span class="n">plazos_diarias</span><span class="p">}</span>
+<span class="n">DIR_SALIDA</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/AWS/archivos_prueba/&#39;</span> <span class="c1">#Directorio donde se van a guardar los datos descargados</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Fecha a descargar</span>
+<span class="n">FECHA</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">año</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">dia</span><span class="p">,</span> <span class="n">ciclo</span><span class="p">)</span>
+
+<span class="c1">#Plazos de las variables horarias a descargar</span>
+<span class="n">plazos_horarias</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Pi_horarias</span><span class="p">,</span> <span class="n">Pf_horarias</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Int_horarias</span><span class="p">)]</span> 
+
+<span class="c1">#Plazos de las variables diarias a descargar</span>
+<span class="n">plazos_diarias</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Pi_diarias</span><span class="p">,</span> <span class="n">Pf_diarias</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Int_diarias</span><span class="p">)]</span> 
+
+<span class="n">variables</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:</span><span class="n">variables_horarias</span><span class="p">,</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:</span><span class="n">variables_diarias</span><span class="p">}</span>
+<span class="n">plazos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:</span><span class="n">plazos_horarias</span><span class="p">,</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:</span><span class="n">plazos_diarias</span><span class="p">}</span>
+
+<span class="c1">#Uso de credenciales anonimas para acceder a la informacion del repositorio</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">DIR_REPO</span> <span class="o">=</span> <span class="s1">&#39;/PATH_AL_REPO/&#39;</span>
+
+<span class="n">listas_ds</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:[],</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:[]}</span>
+<span class="k">for</span> <span class="n">tipo</span> <span class="ow">in</span> <span class="n">variables</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">s3path</span> <span class="o">=</span> <span class="n">FECHA</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_REPO</span><span class="si">}</span><span class="s1">/%Y%m%d/%H/</span><span class="si">{</span><span class="n">tipo</span><span class="si">}</span><span class="s1">/*.nc)&#39;</span><span class="p">)</span>
+    <span class="n">archivos_disponibles</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">s3path</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">archivos_disponibles</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">as</span> <span class="n">archivo_s3</span><span class="p">:</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">archivo_s3</span><span class="p">,</span> <span class="n">decode_timedelta</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="n">listas_ds</span><span class="p">[</span><span class="n">tipo</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+    
+<span class="c1">#Concatenacion de los archivos</span>
+<span class="n">Dataset_horario</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">combine_by_coords</span><span class="p">(</span><span class="n">listas_ds</span><span class="p">[</span><span class="s1">&#39;horarias&#39;</span><span class="p">],</span> <span class="n">combine_attrs</span> <span class="o">=</span> <span class="s1">&#39;drop_conflicts&#39;</span><span class="p">)</span>
+<span class="n">Dataset_diario</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">combine_by_coords</span><span class="p">(</span><span class="n">listas_ds</span><span class="p">[</span><span class="s1">&#39;diarias&#39;</span><span class="p">],</span> <span class="n">combine_attrs</span> <span class="o">=</span> <span class="s1">&#39;drop_conflicts&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Fecha a descargar</span>
+<span class="n">FECHA</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">año</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">dia</span><span class="p">,</span> <span class="n">ciclo</span><span class="p">)</span>
+
+<span class="c1">#Plazos de las variables horarias a descargar</span>
+<span class="n">plazos_horarias</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Pi_horarias</span><span class="p">,</span> <span class="n">Pf_horarias</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Int_horarias</span><span class="p">)]</span> 
+
+<span class="c1">#Plazos de las variables diarias a descargar</span>
+<span class="n">plazos_diarias</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Pi_diarias</span><span class="p">,</span> <span class="n">Pf_diarias</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Int_diarias</span><span class="p">)]</span> 
+
+<span class="n">variables</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:</span><span class="n">variables_horarias</span><span class="p">,</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:</span><span class="n">variables_diarias</span><span class="p">}</span>
+<span class="n">plazos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:</span><span class="n">plazos_horarias</span><span class="p">,</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:</span><span class="n">plazos_diarias</span><span class="p">}</span>
+
+<span class="c1">#Uso de credenciales anonimas para acceder a la informacion del repositorio</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">DIR_REPO</span> <span class="o">=</span> <span class="s1">&#39;/PATH_AL_REPO/&#39;</span>
+
+
+<span class="k">for</span> <span class="n">tipo</span> <span class="ow">in</span> <span class="n">variables</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">[</span><span class="n">tipo</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">plazos</span><span class="p">[</span><span class="n">tipo</span><span class="p">]:</span>
+            <span class="n">archivo</span> <span class="o">=</span> <span class="n">FECHA</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_REPO</span><span class="si">}</span><span class="s1">/%Y%m%d/%H/</span><span class="si">{</span><span class="n">tipo</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">03d</span><span class="si">}</span><span class="s1">.nc)&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">fs</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">archivo</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Descargando el archivo: &#39;</span><span class="p">,</span> <span class="n">archivo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">fs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">archivo</span><span class="p">,</span> <span class="n">DIR_SALIDA</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No se encontro el archivo: &#39;</span><span class="p">,</span> <span class="n">archivo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="lectura-de-los-archivos-descargados">
+<h2>Lectura de los archivos descargados<a class="headerlink" href="#lectura-de-los-archivos-descargados" title="Enlazar permanentemente con este título"></a></h2>
+<p>Una vez descargados todos los archivos requeridos se procede a leerlos y a concatenarlos para tener todas las variables en un mismo <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html">Dataset</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Lectura de los archivos</span>
+<span class="n">listas_ds</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;horarias&#39;</span><span class="p">:[],</span> <span class="s1">&#39;diarias&#39;</span><span class="p">:[]}</span>
+<span class="k">for</span> <span class="n">tipo</span> <span class="ow">in</span> <span class="n">variables</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">plazos</span><span class="p">[</span><span class="n">tipo</span><span class="p">]:</span>
+        <span class="n">archivo</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">DIR_SALIDA</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">FECHA</span><span class="si">:</span><span class="s1">%Y%m%d/%H</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">tipo</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">03d</span><span class="si">}</span><span class="s1">.nc&#39;</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">archivo</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+            <span class="n">listas_ds</span><span class="p">[</span><span class="n">tipo</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">archivo</span><span class="p">,</span> <span class="n">decode_coords</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">decode_timedelta</span> <span class="o">=</span> <span class="kc">False</span><span class="p">))</span>
+
+<span class="c1">#Concatenacion de los archivos</span>
+<span class="n">Dataset_horario</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">combine_by_coords</span><span class="p">(</span><span class="n">listas_ds</span><span class="p">[</span><span class="s1">&#39;horarias&#39;</span><span class="p">],</span> <span class="n">combine_attrs</span> <span class="o">=</span> <span class="s1">&#39;drop_conflicts&#39;</span><span class="p">)</span>
+<span class="n">Dataset_diario</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">combine_by_coords</span><span class="p">(</span><span class="n">listas_ds</span><span class="p">[</span><span class="s1">&#39;diarias&#39;</span><span class="p">],</span> <span class="n">combine_attrs</span> <span class="o">=</span> <span class="s1">&#39;drop_conflicts&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Dataset_horario</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="procesamiento-de-los-pronosticos">
+<h2>Procesamiento de los pronósticos<a class="headerlink" href="#procesamiento-de-los-pronosticos" title="Enlazar permanentemente con este título"></a></h2>
+<p>A continuación se presentan algunos ejemplos de procesamiento de los pronósticos.</p>
+<div class="section" id="pronostico-de-temperatura-a-2-m-para-una-latitud-longitud-y-fecha-determinada">
+<h3>Pronóstico de temperatura a 2 m para una latitud, longitud y fecha determinada<a class="headerlink" href="#pronostico-de-temperatura-a-2-m-para-una-latitud-longitud-y-fecha-determinada" title="Enlazar permanentemente con este título"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latitud</span> <span class="o">=</span> <span class="o">-</span><span class="mi">25</span>
+<span class="n">longitud</span> <span class="o">=</span> <span class="o">-</span><span class="mi">70</span>
+<span class="n">año</span> <span class="o">=</span> <span class="mi">2022</span>
+<span class="n">mes</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">hora</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="n">FECHA</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">año</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">dia</span><span class="p">,</span> <span class="n">hora</span><span class="p">)</span>
+
+<span class="c1">#Se busca la ubicacion del punto mas cercano a la latitud y longitud solicitada</span>
+<span class="n">data_crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span> <span class="o">=</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">CEN_LON</span><span class="p">,</span> 
+                                 <span class="n">central_latitude</span> <span class="o">=</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">CEN_LAT</span><span class="p">,</span> 
+                                 <span class="n">standard_parallels</span> <span class="o">=</span> <span class="p">(</span><span class="n">Dataset_horario</span><span class="o">.</span><span class="n">TRUELAT1</span><span class="p">,</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">TRUELAT2</span><span class="p">))</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">data_crs</span><span class="o">.</span><span class="n">transform_point</span><span class="p">(</span><span class="n">longitud</span><span class="p">,</span> <span class="n">latitud</span><span class="p">,</span> <span class="n">src_crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+
+<span class="c1">#Selecciono el dato mas cercano a la latitud, longitud y fecha escogida</span>
+<span class="n">pronostico</span> <span class="o">=</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">time</span> <span class="o">=</span> <span class="n">FECHA</span><span class="p">),</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;nearest&#39;</span><span class="p">)[</span><span class="s1">&#39;T2&#39;</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El valor pronosticado para la temperatura a 2 m es: </span><span class="si">{</span><span class="n">pronostico</span><span class="o">.</span><span class="n">values</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="meteograma-de-temperatura-a-2-m-y-precipitacion">
+<h3>Meteograma de temperatura a 2 m y precipitación<a class="headerlink" href="#meteograma-de-temperatura-a-2-m-y-precipitacion" title="Enlazar permanentemente con este título"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">latitud</span> <span class="o">=</span> <span class="o">-</span><span class="mi">35</span>
+<span class="n">longitud</span> <span class="o">=</span> <span class="o">-</span><span class="mi">55</span>
+
+<span class="c1">#Se busca la ubicacion del punto mas cercano a la latitud y longitud solicitada</span>
+<span class="n">data_crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span> <span class="o">=</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">CEN_LON</span><span class="p">,</span> 
+                                 <span class="n">central_latitude</span> <span class="o">=</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">CEN_LAT</span><span class="p">,</span> 
+                                 <span class="n">standard_parallels</span> <span class="o">=</span> <span class="p">(</span><span class="n">Dataset_horario</span><span class="o">.</span><span class="n">TRUELAT1</span><span class="p">,</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">TRUELAT2</span><span class="p">))</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">data_crs</span><span class="o">.</span><span class="n">transform_point</span><span class="p">(</span><span class="n">longitud</span><span class="p">,</span> <span class="n">latitud</span><span class="p">,</span> <span class="n">src_crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+
+<span class="c1">#Selecciono el dato mas cercano a la latitud, longitud</span>
+<span class="n">pronostico</span> <span class="o">=</span> <span class="n">Dataset_horario</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">),</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="c1">#Obtengo la serie de temperatura a 2 m, precipitacion acumulada y de fechas</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">pronostico</span><span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">]</span>
+<span class="n">PP</span> <span class="o">=</span> <span class="n">pronostico</span><span class="p">[</span><span class="s1">&#39;PP&#39;</span><span class="p">]</span>
+<span class="n">fechas</span> <span class="o">=</span> <span class="n">pronostico</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span>
+
+<span class="c1">#Inicio la figura</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="c1">#Duplico el eje x</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="c1">#Grafico la precipitacion en barras</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">fechas</span><span class="p">,</span> <span class="n">PP</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">0.03</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Precip. Acum.&#39;</span><span class="p">)</span>
+<span class="c1">#Grafico la tempertura con una linea</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fechas</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Temp. 2 m&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1">#Defino las etiquetas de los ejes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fecha&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;T 2m (°C)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;PP (mm)&#39;</span><span class="p">)</span>
+<span class="c1">#Defino el titulo de la figura</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperatura a 2 m y precipitacion acumulada </span><span class="se">\n</span><span class="s1"> lat = </span><span class="si">{</span><span class="n">latitud</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">, lon = </span><span class="si">{</span><span class="n">longitud</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1">#Grafico la leyenda</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="c1">#Ajusto el grafico al tamaño de la figura</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mapa-de-temperatura-media-diaria-para-una-region">
+<h3>Mapa de temperatura media diaria para una región<a class="headerlink" href="#mapa-de-temperatura-media-diaria-para-una-region" title="Enlazar permanentemente con este título"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lat_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">60</span>
+<span class="n">lat_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">30</span>
+<span class="n">lon_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">80</span>
+<span class="n">lon_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">60</span>
+
+<span class="n">año_ini</span> <span class="o">=</span> <span class="mi">2022</span>
+<span class="n">mes_ini</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">dia_ini</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">hora_ini</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">año_fin</span> <span class="o">=</span> <span class="mi">2022</span>
+<span class="n">mes_fin</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">dia_fin</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">hora_fin</span> <span class="o">=</span> <span class="mi">23</span>
+
+<span class="n">FECHA_INI</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">año_ini</span><span class="p">,</span> <span class="n">mes_ini</span><span class="p">,</span> <span class="n">dia_ini</span><span class="p">,</span> <span class="n">hora_ini</span><span class="p">)</span>
+<span class="n">FECHA_FIN</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">año_fin</span><span class="p">,</span> <span class="n">mes_fin</span><span class="p">,</span> <span class="n">dia_fin</span><span class="p">,</span> <span class="n">hora_fin</span><span class="p">)</span>
+
+<span class="c1">#Defino los limite de la region a enmascarar</span>
+<span class="c1">#esquinas = np.array([[lon_min, lat_min], [lon_min, lat_max], [lon_max, lat_max], [lon_max, lat_min]])</span>
+<span class="n">esquinas</span> <span class="o">=</span> <span class="p">[[</span><span class="n">lon_min</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">],</span> <span class="p">[</span><span class="n">lon_min</span><span class="p">,</span> <span class="n">lat_max</span><span class="p">],</span> <span class="p">[</span><span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_max</span><span class="p">],</span> <span class="p">[</span><span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">]]</span>
+
+<span class="c1">#Armo la mascara</span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">regionmask</span><span class="o">.</span><span class="n">Regions</span><span class="p">([</span><span class="n">esquinas</span><span class="p">])</span>
+<span class="n">mascara</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">Dataset_diario</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">Dataset_diario</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">])</span>
+
+<span class="c1">#selecciono la variable Tmin y la fecha escogida</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="n">Dataset_horario</span><span class="p">[[</span><span class="s1">&#39;T2&#39;</span><span class="p">]]</span>
+<span class="n">T2_fechas</span> <span class="o">=</span> <span class="n">T2</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">FECHA_INI</span><span class="p">,</span> <span class="n">FECHA_FIN</span><span class="p">)))</span>
+<span class="n">T2_media</span> <span class="o">=</span> <span class="n">T2</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+<span class="c1">#Aplico la mascara eliminando los valores por fuera de esta</span>
+<span class="n">T2_region</span> <span class="o">=</span> <span class="n">T2_media</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mascara</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Determino la proyeccion de los datos</span>
+<span class="n">proyeccion</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span> <span class="o">=</span> <span class="n">Dataset_diario</span><span class="o">.</span><span class="n">CEN_LON</span><span class="p">,</span> 
+                                   <span class="n">central_latitude</span> <span class="o">=</span> <span class="n">Dataset_diario</span><span class="o">.</span><span class="n">CEN_LAT</span><span class="p">,</span> 
+                                   <span class="n">standard_parallels</span> <span class="o">=</span> <span class="p">(</span><span class="n">Dataset_diario</span><span class="o">.</span><span class="n">TRUELAT1</span><span class="p">,</span> 
+                                                         <span class="n">Dataset_diario</span><span class="o">.</span><span class="n">TRUELAT2</span><span class="p">))</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)),</span> 
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">proyeccion</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">T2_region</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">T2_region</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">T2_region</span><span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">],</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span> <span class="c1">#Agrega las costas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">)</span> <span class="c1">#Agrega los limites de los paises</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Temperatura media </span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">FECHA_INI</span><span class="si">:</span><span class="s1">%d/%m/%Y</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">draw_labels</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                  <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">gl</span><span class="o">.</span><span class="n">top_labels</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">gl</span><span class="o">.</span><span class="n">right_labels</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cbar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="Data_Access.html" class="btn btn-neutral float-left" title="Data Access" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Federico.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
