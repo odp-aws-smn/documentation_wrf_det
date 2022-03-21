@@ -3,26 +3,28 @@
 El formato de los archivos es **NetCDF** (de sus siglas en inglés Network Common Data Form). Este es un formato destinado a almacenar datos científicos multidimensionales (variables) como puede ser la temperatura y la humedad. La convención utilizada es la [CF](http://cfconventions.org/). Para más información sobre este formato: https://docs.unidata.ucar.edu/netcdf-c/current/index.html
 
 
-**Proyección de los datos:** 
+**Proyección de los datos:** <br />
 El tipo de proyección utilizada es la [*Confome de Lambert*](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3/user_guide_V3.9/users_guide_chap3.html) (retícula no regular). El centro de la retícula se encuentra ubicado en -35° de latitud y -65° de longitud, y la resolución espacial es de 4 km.
 
-**Dimensiones:**
+**Dimensiones:**<br />
 |Dimensión   |Valor   |
 |---|---|
 | time  |1   |
 |y   |1249   |
 |x   |999   |
 
-**Variables:**
+**Variables:**<br />
 |Variable   |Descripción   |Unidad   |Precisión   |
 |---|---|---|---|
 |PP   |Precipitación acumulada en un período de tiempo   |mm   |float32   |
 |HR2   |Humedad relativa a 2 metros   |%   |float32   |
-|T2   |Temperatura a 2 metros   |°C   |float32   |
+|T2   |Temperatura a 2 metros (\*)   |°C   |float32   |
 |dirViento10   |Dirección del viento a 10 metros   |°   |float32   |
-|magViento10   |Magnitud del viento a 10 metros   |m/s   |float32   |
-|Tmax   |Temperatura máxima diaria   |°C   |float32   |
-|Tmin   |Temperatura mínima diaria   |°C   |float32   |
+|magViento10   |Magnitud del viento a 10 metros (\*)   |m/s   |float32   |
+|Tmax   |Temperatura máxima diaria (\*)   |°C   |float32   |
+|Tmin   |Temperatura mínima diaria (\*)   |°C   |float32   |
+
+(\*) Variables calibradas con observaciones de superficie. Para más información consultar la nota técnica [Cutraro y otros, 2020](http://hdl.handle.net/20.500.12160/1405). En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.
 
 En el caso de la Tmín válida para el día X el valor corresponde a la temperatura mínima pronosticada para el día X entre las 00Z y las 12Z.
 Para Tmáx el valor del día X corresponde a la temperatura máxima pronosticada entre las 12Z del día X y las 00Z del día X+1.
@@ -33,7 +35,7 @@ Para el caso de la PP válida para el día X en el plazo P, el valor corresponde
 
 Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00Z para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 20220315 entre las 11Z y las 12Z.
 
-**Variables de coordenadas:**
+**Variables de coordenadas:**<br />
 |Variable   |Descripción   |Unidad   |Precisión   |
 |---|---|---|---|
 |time   |Tiempo   |Horas desde el inicio del ciclo de pronóstico   |int   |
