@@ -21,7 +21,7 @@ project = 'Documentación'
 copyright = 'SMN 2022'
 author = 'Dirección Nacional de Ciencia e Innovación en Productos y Servicios'
 
-
+show_authors = True
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
