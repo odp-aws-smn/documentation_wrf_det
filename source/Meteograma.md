@@ -83,6 +83,6 @@ plt.tight_layout()
 
 
     
-![png](Meteograma_files/Meteograma_7_0.png)
+![png](../figuras/fig_meteograma.png)
     
 
