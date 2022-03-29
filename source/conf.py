@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'Documentación'
-copyright = 'SMN 2022'
+copyright = 'Servicio Meteorológico Nacional 2022'
 author = 'Dirección Nacional de Ciencia e Innovación en Productos y Servicios'
 
 show_authors = True
