@@ -1,4 +1,4 @@
-# Data Access
+# Acceso de datos
 
 Para acceder a los datos se puede usar los siguiente:
 
