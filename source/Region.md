@@ -1,6 +1,6 @@
 # Gráfico de una región
 
-Ejemplo para el cálculo de la temperatura mínima media en una región
+Ejemplo para el cálculo de la humedad relativa media en una región
 
 
 ```python
@@ -18,10 +18,25 @@ Se define la fecha de inicialización del pronóstico.
 
 
 ```python
+año_fcst = 2022
+mes_fcst = 3
+dia_fcst = 21
+hora_fcst = 0
+```
+
+Se define el período entre los que se va a promediar la humedad relativa
+
+
+```python
 año_ini = 2022
 mes_ini = 3
 dia_ini = 21
 hora_ini = 0
+
+año_fin = 2022
+mes_fin = 3
+dia_fin = 21
+hora_fin = 23
 ```
 
 Se define la región a graficar
@@ -38,18 +53,28 @@ Lectura de los pronóstico
 
 
 ```python
+FECHA_FCST = datetime.datetime(año_fcst, mes_fcst, dia_fcst, hora_fcst)
+
 FECHA_INI = datetime.datetime(año_ini, mes_ini, dia_ini, hora_ini)
+FECHA_FIN = datetime.datetime(año_fin, mes_fin, dia_fin, hora_fin)
+
+#Plazo de pronóstico
+plazo_ini = int((FECHA_INI - FECHA_FCST).total_seconds()/3600)
+plazo_fin = int((FECHA_FIN - FECHA_FCST).total_seconds()/3600)
 
 fs = s3fs.S3FileSystem(anon=True)
 
-files = fs.glob(f'smn-ar-wrf/DATA/WRF/DET/{FECHA_INI:%Y/%m/%d/%H}/WRFDETAR_24H_{FECHA_INI:%Y%m%d_%H}_*.nc')
+files = [f'smn-ar-wrf/DATA/WRF/DET/{FECHA_FCST:%Y/%m/%d/%H}/WRFDETAR_01H_{FECHA_FCST:%Y%m%d_%H}_{plazo:03d}.nc' for plazo in range(plazo_ini, plazo_fin)]
 
 ds_list = []
 for s3_file in files:
     print(s3_file)
-    f = fs.open(s3_file)
-    ds_tmp = xr.open_dataset(f, decode_coords = 'all', engine = 'h5netcdf')
-    ds_list.append(ds_tmp)
+    if fs.exists(s3_file):
+        f = fs.open(s3_file)
+        ds_tmp = xr.open_dataset(f, decode_coords = 'all', engine = 'h5netcdf')
+        ds_list.append(ds_tmp)
+    else:
+        print('el archivo {} no existe'.format(s3_file))
 
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
@@ -60,16 +85,16 @@ Se seleccionan los datos pertenecientes a la región y se calcula la temperatura
 ```python
 esquinas = [[lon_min, lat_min], [lon_min, lat_max], [lon_max, lat_max], [lon_max, lat_min]]
 
-#Armo la mascara
+#Armo la mascara de la región
 region = regionmask.Regions([esquinas])
 mascara = region.mask(ds['lon'], ds['lat'])
 
-#selecciono la variable Tmin y la fecha escogida
-Tmin = ds[['Tmin']]
-Tmin_media = Tmin.mean(dim = 'time')
+#selecciono la variable HR2 y calculo el valor medio diario
+HR = ds[['HR2']]
+HR_media = HR.mean(dim = 'time')
 
 #Aplico la mascara eliminando los valores por fuera de esta
-Tmin_region = Tmin_media.where(mascara == 0, drop = True)
+HR_region = HR_media.where(mascara == 0, drop = True)
 ```
 
 
@@ -82,10 +107,10 @@ proyeccion = ccrs.LambertConformal(central_longitude = ds.CEN_LON,
 
 fig = plt.figure(figsize = (10, 8)), 
 ax = plt.axes(projection = proyeccion)
-cbar = ax.pcolormesh(Tmin_region['lon'], Tmin_region['lat'], Tmin_region['Tmin'], transform = ccrs.PlateCarree())
+cbar = ax.pcolormesh(HR_region['lon'], HR_region['lat'], HR_region['HR2'], transform = ccrs.PlateCarree(), vmin = 0, vmax = 100)
 ax.add_feature(cf.COASTLINE) #Agrega las costas
 ax.add_feature(cf.BORDERS) #Agrega los limites de los paises
-ax.set_title(f'Temperatura mínima media')
+ax.set_title(f'Humedad relativa media')
 
 gl = ax.gridlines(crs = ccrs.PlateCarree(), draw_labels = True, x_inline = False,
                   linewidth = 2, color = 'gray', alpha = 0.5, linestyle = '--')
@@ -95,5 +120,6 @@ plt.colorbar(cbar)
 ```
 
 ![png](../figuras/Region.png)
+
+Descarga la notebook de [acá](../notebooks/Region.ipynb)
     
-Para descargar la notebook acceder al siguiente [link](../notebooks/Region.ipynb)
