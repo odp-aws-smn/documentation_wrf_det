@@ -10,7 +10,7 @@ Documentación del modelo WRF en Amazon Web Services
     :maxdepth: 2
     :caption: Contenido:
 
-    Información_general
+    Informacion_general
     Formato_de_datos
     Acceso_de_datos
     Tutoriales
