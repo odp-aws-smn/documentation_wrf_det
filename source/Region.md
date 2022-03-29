@@ -96,4 +96,4 @@ plt.colorbar(cbar)
 
 ![png](../figuras/Region.png)
     
-
+Descarga la notebook de [acá](../notebooks/Region.ipynb)
