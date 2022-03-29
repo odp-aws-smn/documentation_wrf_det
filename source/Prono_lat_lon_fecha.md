@@ -78,4 +78,4 @@ print(f'El valor pronosticado para la variable {var} en la latitud {latitud} y l
 
 
 
-Descarga la notebook de [acá](../notebooks/Prono_lat_lon_fecha.ipynb)
+Para descargar la notebook acceder al siguiente [link](../notebooks/Prono_lat_lon_fecha.ipynb)
