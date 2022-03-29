@@ -121,5 +121,5 @@ plt.colorbar(cbar)
 
 ![png](../figuras/Region.png)
 
-Descarga la notebook de [acá](../notebooks/Region.ipynb)
+Para descargar la notebook acceder al siguiente [link](../notebooks/Region.ipynb)
     
