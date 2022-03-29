@@ -1,4 +1,4 @@
-# Data Format
+# Formato de datos
 
 El formato de los archivos es **NetCDF** (de sus siglas en inglés Network Common Data Form). Este es un formato destinado a almacenar datos científicos multidimensionales (variables) como puede ser la temperatura y la humedad. La convención utilizada es la [CF](http://cfconventions.org/). Para más información sobre este formato: https://docs.unidata.ucar.edu/netcdf-c/current/index.html
 
