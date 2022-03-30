@@ -1,4 +1,4 @@
-# Información general
+# Estructura de datos
 
 La estructura de directorios y nombres de archivos es la siguiente: 
 
