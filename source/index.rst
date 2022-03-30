@@ -11,6 +11,7 @@ Documentación del modelo WRF en Amazon Web Services
     :caption: Contenido:
 
     Informacion_general
+    Estructura_de_datos
     Formato_de_datos
     Acceso_a_los_datos
     Tutoriales
