@@ -5,7 +5,8 @@ Para acceder a los datos se puede usar los siguiente:
 **vía URL**<br />
 Los archivos pueden ser descargados directamente accediendo al siguiente link: https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html
 
-**AWS CLI**<br />
+**AWS CLI**<br /> 
+PREGUNTAR A MAXI/FEDE COMO ESCRIBIR ESTA PARTE
 Los datos de S3 se pueden descargar utilizando AWS CLI. Para más información sobre su instalación visitar el siguiente 
 [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).<br />
 Using the object keys described above, the following bash script downloads a shapefile (2020-01-01_performance_fixed_tiles.zip) for fixed performance tiles aggregated over Q1 2020 using aws s3 cp.
@@ -34,7 +35,7 @@ Por ejemplo: <br />
 import s3fs
 s3_file = 's3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_000.nc'   # nombre del archivo a descargar 
 fs = s3fs.S3FileSystem(anon=True)
-fs.get(s3_file)
+data = fs.get(s3_file)
 ```
 
 **R**<br />
