@@ -30,10 +30,12 @@ aws s3 cp s3://ookla-open-data/parquet/performance/type=fixed/year=2020/quarter=
 **Python**<br />
 Utilizando la librería [s3sf](https://pypi.org/project/s3fs/) <br />
 Por ejemplo: <br />
-import s3fs <br />
-s3_file = 's3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_000.nc'   # nombre del archivo a descargar <br />
-fs = s3fs.S3FileSystem(anon=True)<br />
-fs.get(s3_file)<br />
+```python
+import s3fs
+s3_file = 's3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_000.nc'   # nombre del archivo a descargar 
+fs = s3fs.S3FileSystem(anon=True)
+fs.get(s3_file)
+```
 
 **R**<br />
 El paquete de R [ooklaOpenDataR](https://github.com/teamookla/ooklaOpenDataR) provee funciones para acceder y trabajar con los datos. ME PARECE QUE ESTO NO NOS SIRVE ....<br />
