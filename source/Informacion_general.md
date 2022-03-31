@@ -11,8 +11,6 @@ Los pronósticos horarios generados con el modelo WRF-Arg cuentan con una resolu
 
 La proyección de los datos es Conforme de Lambert y el dominio abarca todo Argentina como se puede apreciar en la siguiente figura: <br />
 
-<p align="center">
-  <img src="https://github.com/odp-aws-smn/documentation_wrf_det/blob/master/figuras/dominioWRF4.png" >
-</p>
+![png](../figuras/dominioWRF4.png?style=centerme)  <br /> *Dominio WRF-Arg*
 
 Más detalles de la configuración se pueden encontrar en el siguiente [link](http://repositorio.smn.gob.ar/handle/20.500.12160/1402).
