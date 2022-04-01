@@ -6,7 +6,7 @@
 Documentación del modelo WRF en Amazon Web Services
 ===================================================
 
-El Servicio Meteorológico Nacional de Argentina (SMN-Arg) corre en forma operativa el modelo regional de alta resolución Weather Research and Forecasting Model (WRF) en su versión con núcleo dinámico Advanced Research WRF (ARW) version 4.0 (`Skamarock et al., 2008 <http://dx.doi.org/10.5065/D68S4MVH>`_). El modelo resuelve la convección en forma explícita con paso de tiempo variable y fue configurado utilizando las siguientes parametrizaciones:
+El Servicio Meteorológico Nacional de Argentina (`SMN-Arg <https://www.smn.gob.ar/>`_) corre en forma operativa el modelo regional de alta resolución Weather Research and Forecasting Model (WRF) en su versión con núcleo dinámico Advanced Research WRF (ARW) version 4.0 (`Skamarock et al., 2008 <http://dx.doi.org/10.5065/D68S4MVH>`_). El modelo resuelve la convección en forma explícita con paso de tiempo variable y fue configurado utilizando las siguientes parametrizaciones:
 
 - Microfísica: WSM6 (un momento - 6 clases) 
 - Radiación onda larga: RRTM
