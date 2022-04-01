@@ -1,6 +1,6 @@
 # Interpolación a retícula regular
 
-En esta notebook se da un ejemplo de cómo transformar los datos que se  encuentran e proyección Conforme de Lambert a una retícula regular
+En esta notebook se da un ejemplo de cómo transformar los datos que se  encuentran e proyección Conforme de Lambert a una retícula regular.
 
 
 ```python
@@ -11,7 +11,7 @@ import s3fs
 import xesmf as xe
 ```
 
-Se define la fecha de inicialización y de validez del pronóstico a interpolar
+Se define la fecha de inicialización y de validez del pronóstico a interpolar:
 
 
 ```python
@@ -26,7 +26,7 @@ dia_fcst = 22
 hora_fcst = 17
 ```
 
-Se lee el archivo que posee el dato buscado
+Se lee el archivo que posee el dato buscado:
 
 
 ```python
@@ -47,7 +47,7 @@ else:
     print('El archivo buscado no existe')
 ```
 
-Se define la retícula a la que se quiere interpolar
+Se define la retícula a la que se quiere interpolar:
 
 
 ```python
@@ -63,7 +63,7 @@ nueva_reticula = xe.util.grid_2d(lon_min - resolucion_lon/2, lon_max, resolucion
 
 ```
 
-Se realiza la interpolación
+Se realiza la interpolación:
 
 
 ```python
