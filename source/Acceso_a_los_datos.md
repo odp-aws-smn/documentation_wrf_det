@@ -13,6 +13,9 @@ Por ejemplo, para descargar los archivos del ciclo 00 UTC del día 21 de marzo 2
 #!/usr/bin/env bash
 aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/
 ```
+PROBAR DESDE HM /data/fcutraro/aws_cli/bin/
+
+
 
 **Python**<br />
 Utilizando la librería [s3sf](https://pypi.org/project/s3fs/) <br />
