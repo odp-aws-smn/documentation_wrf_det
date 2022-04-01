@@ -22,7 +22,7 @@ La proyección de los datos es Conforme de Lambert y el dominio abarca todo Arge
   :width: 400
   :alt: Alternative text
 
-*Dominio WRF-Arg*
+*Figura 1: Dominio WRF-Arg*
 
 Más detalles de la configuración se pueden encontrar en el siguiente `link <http://repositorio.smn.gob.ar/handle/20.500.12160/1402>`_.
 
