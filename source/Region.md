@@ -1,7 +1,6 @@
 # Gráfico de una región
 
-Ejemplo para el cálculo de la humedad relativa media en una región
-
+Ejemplo para el cálculo de la humedad relativa media en una región.
 
 ```python
 import xarray as xr
@@ -14,8 +13,7 @@ import matplotlib.pyplot as plt
 import regionmask
 ```
 
-Se define la fecha de inicialización del pronóstico.
-
+Se define la fecha de inicialización del pronóstico:
 
 ```python
 año_fcst = 2022
@@ -24,8 +22,7 @@ dia_fcst = 21
 hora_fcst = 0
 ```
 
-Se define el período entre los que se va a promediar la humedad relativa
-
+Se define el período en el que se va a promediar la humedad relativa:
 
 ```python
 año_ini = 2022
@@ -39,8 +36,7 @@ dia_fin = 21
 hora_fin = 23
 ```
 
-Se define la región a graficar
-
+Se define la región a graficar:
 
 ```python
 lat_min = -60
@@ -49,8 +45,7 @@ lon_min = -80
 lon_max = -60
 ```
 
-Lectura de los pronóstico
-
+Lectura de los pronósticos:
 
 ```python
 FECHA_FCST = datetime.datetime(año_fcst, mes_fcst, dia_fcst, hora_fcst)
@@ -58,7 +53,7 @@ FECHA_FCST = datetime.datetime(año_fcst, mes_fcst, dia_fcst, hora_fcst)
 FECHA_INI = datetime.datetime(año_ini, mes_ini, dia_ini, hora_ini)
 FECHA_FIN = datetime.datetime(año_fin, mes_fin, dia_fin, hora_fin)
 
-#Plazo de pronóstico
+# Plazo de pronóstico
 plazo_ini = int((FECHA_INI - FECHA_FCST).total_seconds()/3600)
 plazo_fin = int((FECHA_FIN - FECHA_FCST).total_seconds()/3600)
 
@@ -79,27 +74,25 @@ for s3_file in files:
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
 
-Se seleccionan los datos pertenecientes a la región y se calcula la temperatura mínima media diaria
-
+Se seleccionan los datos pertenecientes a la región y se calcula la temperatura mínima media diaria:
 
 ```python
 esquinas = [[lon_min, lat_min], [lon_min, lat_max], [lon_max, lat_max], [lon_max, lat_min]]
 
-#Armo la mascara de la región
+# Armo la máscara de la región
 region = regionmask.Regions([esquinas])
 mascara = region.mask(ds['lon'], ds['lat'])
 
-#selecciono la variable HR2 y calculo el valor medio diario
+# Selecciono la variable HR2 y calculo el valor medio diario
 HR = ds[['HR2']]
 HR_media = HR.mean(dim = 'time')
 
-#Aplico la mascara eliminando los valores por fuera de esta
+# Aplico la máscara eliminando los valores por fuera de ésta
 HR_region = HR_media.where(mascara == 0, drop = True)
 ```
 
-
 ```python
-# Determino la proyeccion de los datos
+# Determino la proyección de los datos
 proyeccion = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
                                    central_latitude = ds.CEN_LAT, 
                                    standard_parallels = (ds.TRUELAT1, 
