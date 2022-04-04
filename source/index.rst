@@ -3,29 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Documentación del modelo WRF en Amazon Web Services
+Pronóstico meteorológico de alta resolución sobre Argentina con el 
+modelo WRF-SMN
 ===================================================
 
-El Servicio Meteorológico Nacional de Argentina (`SMN-Arg <https://www.smn.gob.ar/>`_) corre en forma operativa el modelo regional de alta resolución Weather Research and Forecasting Model (WRF) en su versión con núcleo dinámico Advanced Research WRF (ARW) version 4.0 (`Skamarock et al., 2008 <http://dx.doi.org/10.5065/D68S4MVH>`_). El modelo resuelve la convección en forma explícita con paso de tiempo variable y fue configurado utilizando las siguientes parametrizaciones:
+Desde el X de abril del 2022 el Servicio Meteorológico Nacional de Argentina (`SMN-Arg <https://www.smn.gob.ar/>`_) inició una nueva etapa en la disponibilización de sus datos de pronósticos producidos con el modelo WRF-SMN. Gracias a su nueva política de datos establecida en febrero de este año, y al apoyo de Amazon Web Services (AWS) con su programa Open Data Sponsorship Program, el SMN-Arg pone a disposición de los usuarios interesados un número importante de variables meteorológicas pronosticadas.
 
-- Microfísica: WSM6 (un momento - 6 clases) 
-- Radiación onda larga: RRTM
-- Radiación onda corta: Dudhia
-- Capa Límite Planetaria: MYJ (Mellor, Yamada, Janjic)
-- Modelo de suelo: NOAH, 4 capas (0-10 cm, 10-40 cm, 40-100 cm, 1-2 m)
+En este sitio puede encontrarse tanto la información general sobre el modelo que genera los pronósticos, información sobre el formato de los datos y su forma de acceso, así como también ejemplos de uso y tutoriales.
 
-Los pronósticos horarios generados con el modelo WRF-Arg cuentan con una resolución horizontal de 4 km con 45 niveles verticales (tope 10 hPa) y plazo máximo de 72 horas. Los mismos se inicializan con los análisis y pronósticos horarios del NCEP-NOAA Global Forecasting System Model (GFS) de 0.25° de resolución horizontal.
-
-La proyección de los datos es Conforme de Lambert y el dominio abarca todo Argentina como se puede apreciar en la Figura 1: 
-
-.. image:: ../figuras/dominioWRF4.png
-  :width: 400
-  :alt: Alternative text
-
-*Figura 1: Dominio WRF-Arg*
-
-Más detalles de la configuración se pueden encontrar en el siguiente `link <http://repositorio.smn.gob.ar/handle/20.500.12160/1402>`_.
-
+Para cualquier cuestión relacionada con el contenido de este sitio, como sobre preguntas o sugerencias por favor contactarnos al odp-aws@smn.gov.ar.
 
 
 .. toctree::
