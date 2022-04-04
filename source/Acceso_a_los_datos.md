@@ -1,8 +1,8 @@
 # Acceso a los datos
 
-AGREGAR ACA EL LINK AL PORTAL DE AWS
+Los datos se encuentran disponibles en el portal de AWS: https://registry.opendata.aws/smn-ar-wrf/
 
-Para acceder a los datos se puede usar los siguiente:
+La descarga de los datos se puede realizar de las siguientes maneras:
 
 **vía URL**<br />
 Los archivos pueden ser descargados directamente accediendo al siguiente link: https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html
@@ -15,10 +15,6 @@ Por ejemplo, para descargar los archivos del ciclo 00 UTC del día 21 de marzo 2
 #!/usr/bin/env bash
 aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/
 ```
-PROBAR DESDE HM /data/fcutraro/aws_cli/bin/
-
-
-
 **Python**<br />
 Utilizando la librería [s3sf](https://pypi.org/project/s3fs/) <br />
 Por ejemplo, para descargar los archivos del ciclo 00 UTC del día 21 de marzo 2022 ejecutar las siguientes líneas: <br />
