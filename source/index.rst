@@ -23,3 +23,4 @@ Para cualquier cuestión relacionada con el contenido de este sitio, como sobre 
     Acceso_a_los_datos
     Tutoriales
     Novedades
+    Version_ingles 
