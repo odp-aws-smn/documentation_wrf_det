@@ -15,6 +15,12 @@ Por ejemplo, para descargar el archivo del plazo 02 UTC del ciclo 00 UTC del dí
 #!/usr/bin/env bash
 aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/WRFDETAR_01H_20220321_00_002.nc directorio_salida
 ```
+Para descargar todos los plazos del ciclo 00 UTC del día 21 de marzo 2022:
+```bash
+#!/usr/bin/env bash
+aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recursive directorio_salida
+```
+
 **Python**<br />
 Utilizando la librería [s3sf](https://pypi.org/project/s3fs/) <br />
 Por ejemplo, para descargar los archivos del ciclo 00 UTC del día 21 de marzo 2022 ejecutar las siguientes líneas: <br />
