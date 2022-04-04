@@ -1,7 +1,6 @@
 # Meteograma
 
-En este ejemplo se describe hacer una figura que muestra la evolución de la temperatura a 2 m y la precipitación horaria en todos los plazos del pronóstico para una latitud y longitud.
-
+En este ejemplo se describe cómo hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en función de los plazos de pronóstico para una latitud y longitud determinada.
 
 ```python
 import xarray as xr
@@ -12,8 +11,7 @@ import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
 ```
 
-Se define la fecha de inicialización del pronóstico y la latitud y longitud a consultar.
-
+Se define la fecha de inicialización del pronóstico y la latitud y longitud a consultar:
 
 ```python
 latitud = -40
@@ -25,8 +23,7 @@ dia_ini = 21
 hora_ini = 0
 ```
 
-Se leen los pronósticos 
-
+Se leen los pronósticos:
 
 ```python
 FECHA_INI = datetime.datetime(año_ini, mes_ini, dia_ini, hora_ini)
@@ -45,46 +42,41 @@ for s3_file in files:
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
 
-
 ```python
-#Se busca la ubicacion del punto mas cercano a la latitud y longitud solicitada
+# Se busca la ubicación del punto más cercano a la latitud y longitud solicitada
 data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
                                  central_latitude = ds.CEN_LAT, 
                                  standard_parallels = (ds.TRUELAT1, ds.TRUELAT2))
 x, y = data_crs.transform_point(longitud, latitud, src_crs=ccrs.PlateCarree())
 
-#Selecciono el dato mas cercano a la latitud, longitud
+# Se selecciona el dato más cercano a la latitud, longitud
 pronostico = ds.sel(dict(x = x, y = y), method = 'nearest')
 
-#Obtengo la serie de temperatura a 2 m, precipitacion acumulada y de fechas
+# Se obtiene la serie de temperatura a 2 m, precipitación acumulada y de fechas
 T2 = pronostico['T2']
 PP = pronostico['PP']
 fechas = pronostico['time']
 
-#Inicio la figura
+# Inicio la figura
 fig, ax = plt.subplots(figsize = (10, 8))
-#Duplico el eje x
+# Duplico el eje x
 ax2 = ax.twinx()
-#Grafico la precipitacion en barras
+# Grafico la precipitación en barras
 ax.bar(fechas, PP, color = 'blue', width = 0.03, label = 'Precip. Acum.')
-#Grafico la tempertura con una linea
+# Grafico la tempertura con una linea
 ax2.plot(fechas, T2, color = 'red', label = 'Temp. 2 m', linewidth = 3)
-#Defino las etiquetas de los ejes
+# Defino las etiquetas de los ejes
 ax.set_xlabel('Fecha')
 ax2.set_ylabel('T 2m (°C)')
 ax.set_ylabel('PP (mm)')
-#Defino el titulo de la figura
+# Defino el título de la figura
 plt.title(f'Temperatura a 2 m y precipitacion acumulada \n lat = {latitud:0.2f}, lon = {longitud:0.2f}')
-#Grafico la leyenda
+# Grafico la leyenda
 fig.legend(loc = 'upper right')
-#Ajusto el grafico al tamaño de la figura
+# Ajusto el gráfico al tamaño de la figura
 plt.tight_layout()
 ```
-
-
     
 ![png](../figuras/fig_meteograma.png)
     
-
 Para descargar la notebook acceder al siguiente [link](../notebooks/Meteograma.ipynb)
-
