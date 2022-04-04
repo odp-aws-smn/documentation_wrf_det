@@ -1,6 +1,6 @@
 # Información general
 
-El Servicio Meteorológico Nacional de Argentina (SMN-Arg) corre en forma operativa el modelo regional de alta resolución Weather Research and Forecasting Model (WRF) en su versión con núcleo dinámico Advanced Research WRF (ARW) version 4.0 (Skamarock et al. 2008). El modelo resuelve la convección en forma explícita con paso de tiempo variable y fue configurado utilizando las siguientes parametrizaciones: <br />
+El SMN-Arg corre en forma operativa el modelo regional de alta resolución Weather Research and Forecasting Model (WRF) en su versión con núcleo dinámico Advanced Research WRF (ARW) version 4.0 ([Skamarock et al. 2019](https://www2.mmm.ucar.edu/wrf/users/docs/technote/v4_technote.pdf)). El modelo resuelve la convección en forma explícita con paso de tiempo variable y fue configurado utilizando las siguientes parametrizaciones: <br />
 - Microfísica: WSM6 (un momento - 6 clases)
 - Radiación onda larga: RRTM
 - Radiación onda corta: Dudhia
