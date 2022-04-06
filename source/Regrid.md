@@ -1,6 +1,6 @@
 # Interpolación a retícula regular
 
-En esta notebook se da un ejemplo de cómo transformar los datos que se encuentran en la proyección Conforme de Lambert a una retícula regular.
+En esta notebook se da un ejemplo de cómo transformar los datos que se encuentran en la proyección Conforme de Lambert a una proyección cilíndrica de modo que queden en una retícula regular.
 
 ```python
 import xarray as xr
@@ -44,7 +44,7 @@ else:
     print('El archivo buscado no existe')
 ```
 
-Se define la retícula a la que se quiere interpolar:
+Se define la nueva retícula a la que se quiere interpolar:
 
 ```python
 resolucion_lat = 0.1
