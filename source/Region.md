@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import regionmask
 ```
 
-Se define la fecha de inicialización del pronóstico:
+Se define la fecha y hora de inicialización del pronóstico:
 
 ```python
 año_fcst = 2022
@@ -53,7 +53,7 @@ FECHA_FCST = datetime.datetime(año_fcst, mes_fcst, dia_fcst, hora_fcst)
 FECHA_INI = datetime.datetime(año_ini, mes_ini, dia_ini, hora_ini)
 FECHA_FIN = datetime.datetime(año_fin, mes_fin, dia_fin, hora_fin)
 
-# Plazo de pronóstico
+# Se calcula el plazo de pronóstico
 plazo_ini = int((FECHA_INI - FECHA_FCST).total_seconds()/3600)
 plazo_fin = int((FECHA_FIN - FECHA_FCST).total_seconds()/3600)
 
@@ -74,7 +74,7 @@ for s3_file in files:
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
 
-Se seleccionan los datos pertenecientes a la región y se calcula la temperatura mínima media diaria:
+Se seleccionan los datos pertenecientes a la región y se calcula la humedad relativa media diaria:
 
 ```python
 esquinas = [[lon_min, lat_min], [lon_min, lat_max], [lon_max, lat_max], [lon_max, lat_min]]
