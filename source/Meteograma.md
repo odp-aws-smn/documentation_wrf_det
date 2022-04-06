@@ -11,7 +11,7 @@ import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
 ```
 
-Se define la fecha de inicialización del pronóstico y la latitud y longitud a consultar:
+Se define la fecha y hora de inicialización del pronóstico, y la latitud y longitud a consultar:
 
 ```python
 latitud = -40
