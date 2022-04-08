@@ -39,7 +39,7 @@ Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos d
 |Variable   |Descripción   |Unidad   |Precisión   |
 |---|---|---|---|
 |time   |Tiempo   |Horas desde el inicio del ciclo de pronóstico   |int   |
-|y   |Coordenada y   |Metros desde el centro de la proyección   |float32   |
-|x   |Coordenada x   |Metros desde el centro de la proyección   |float32   |
+|y   |Coordenada y   |Metros desde el centro de la retícula   |float32   |
+|x   |Coordenada x   |Metros desde el centro de la retícula   |float32   |
 |lat   |Latitud   |° (convención entre 90° y -90°)   |float32   |
 |lon   |Longitud   |° (convención entre -180° y 180°)   |float32   |
