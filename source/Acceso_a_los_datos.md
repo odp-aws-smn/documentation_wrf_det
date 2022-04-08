@@ -1,6 +1,6 @@
 # Acceso a los datos
 
-Los datos se encuentran disponibles en el **portal de AWS**: [https://registry.opendata.aws/smn-ar-wrf/](https://registry.opendata.aws/smn-ar-wrf/)
+Los datos se encuentran disponibles en el **portal de AWS**: [https://registry.opendata.aws/smn-ar-wrf-dataset/](https://registry.opendata.aws/smn-ar-wrf-dataset/)
 
 La descarga de los datos se puede realizar de las siguientes maneras:
 
