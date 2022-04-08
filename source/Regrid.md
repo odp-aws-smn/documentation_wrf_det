@@ -31,7 +31,7 @@ Se lee el archivo que posee el dato buscado:
 FECHA_INI = datetime.datetime(año_ini, mes_ini, dia_ini, hora_ini)
 FECHA_FCST = datetime.datetime(año_fcst, mes_fcst, dia_fcst, hora_fcst)
 
-# Plazo de pronóstico
+# Se calcula el plazo de pronóstico
 plazo = int((FECHA_FCST - FECHA_INI).total_seconds()/3600)
 
 s3_file = f'smn-ar-wrf/DATA/WRF/DET/{FECHA_INI:%Y/%m/%d/%H}/WRFDETAR_01H_{FECHA_INI:%Y%m%d_%H}_{plazo:03d}.nc'
