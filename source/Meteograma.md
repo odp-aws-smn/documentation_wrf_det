@@ -3,6 +3,7 @@
 En este ejemplo se describe cómo hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en función de los plazos de pronóstico para una latitud y longitud determinada.
 
 ```python
+# Se importan las librerías necesarias
 import xarray as xr
 import h5netcdf
 import datetime
