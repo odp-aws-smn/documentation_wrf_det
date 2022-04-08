@@ -88,7 +88,7 @@ mascara = region.mask(ds['lon'], ds['lat'])
 HR = ds[['HR2']]
 HR_media = HR.mean(dim = 'time')
 
-# Se aplico la máscara eliminando los valores por fuera de ésta
+# Se aplica la máscara eliminando los valores por fuera de ésta
 HR_region = HR_media.where(mascara == 0, drop = True)
 ```
 
