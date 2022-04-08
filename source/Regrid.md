@@ -3,6 +3,7 @@
 En esta notebook se da un ejemplo de cómo transformar los datos que se encuentran en la proyección Conforme de Lambert a una proyección cilíndrica de modo que queden en una retícula regular.
 
 ```python
+# Se importan las librerías necesarias
 import xarray as xr
 import h5netcdf
 import datetime
@@ -66,4 +67,4 @@ regridder = xe.Regridder(ds, nueva_reticula, 'bilinear')
 ds_interpolado = regridder(ds, keep_attrs = True)
 ```
 
-Para descargar la notebook acceder al siguiente [link](../notebooks/Regrid.ipynb)
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Regrid.ipynb).
