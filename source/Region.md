@@ -3,6 +3,7 @@
 Ejemplo para el cálculo de la humedad relativa media en una región.
 
 ```python
+# Se importan las librerías necesarias
 import xarray as xr
 import h5netcdf
 import datetime
@@ -114,5 +115,5 @@ plt.colorbar(cbar)
 
 ![png](../figuras/Region.png)
 
-Para descargar la notebook acceder al siguiente [link](../notebooks/Region.ipynb)
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Region.ipynb).
     
