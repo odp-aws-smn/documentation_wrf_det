@@ -3,17 +3,19 @@
 El formato de los archivos es **NetCDF** (de sus siglas en inglés Network Common Data Form). Este es un formato destinado a almacenar datos científicos multidimensionales (variables) como puede ser la temperatura y la humedad. La convención utilizada es la [CF](http://cfconventions.org/). Para más información sobre este formato visitar el siguiente [link](https://docs.unidata.ucar.edu/netcdf-c/current/index.html).
 
 
-**Proyección de los datos:** <br />
+**Proyección de los datos** <br />
 El tipo de proyección utilizada es la [*Confome de Lambert*](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3/user_guide_V3.9/users_guide_chap3.html) (retícula no regular). El centro de la retícula se encuentra ubicado en -35° de latitud y -65° de longitud, y la resolución espacial es de 4 km.
 
-**Dimensiones:**<br />
+**Dimensiones**<br />
+Las dimensiones de los datos se encuentra en la siguiente tabla:
 |Dimensión   |Valor   |
 |---|---|
 | time  |1   |
 |y   |1249   |
 |x   |999   |
 
-**Variables:**<br />
+**Variables**<br />
+Las variables presentes en los archivos son las siguientes: 
 |Variable   |Descripción   |Unidad   |Precisión   |
 |---|---|---|---|
 |PP   |Precipitación acumulada en un período de tiempo   |mm   |float32   |
