@@ -4,7 +4,7 @@ Los datos se encuentran disponibles en el **portal de AWS**: [https://registry.o
 
 La descarga de los datos se puede realizar de las siguientes maneras:
 
-**vía URL**<br />
+**Vía URL**<br />
 Los archivos pueden ser descargados directamente accediendo al siguiente link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html)
 
 **AWS CLI**<br /> 
@@ -22,7 +22,7 @@ aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recurs
 ```
 
 **Python**<br />
-Utilizando la librería [s3sf](https://pypi.org/project/s3fs/) <br />
+Utilizando la librería [s3sf](https://pypi.org/project/s3fs/). <br />
 Por ejemplo, para descargar los archivos del ciclo 00 UTC del día 21 de marzo 2022 ejecutar las siguientes líneas: <br />
 ```python
 import s3fs
