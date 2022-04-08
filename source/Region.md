@@ -46,7 +46,7 @@ lon_min = -80
 lon_max = -60
 ```
 
-Lectura de los pronósticos:
+Se leen los pronósticos:
 
 ```python
 FECHA_FCST = datetime.datetime(año_fcst, mes_fcst, dia_fcst, hora_fcst)
@@ -80,20 +80,20 @@ Se seleccionan los datos pertenecientes a la región y se calcula la humedad rel
 ```python
 esquinas = [[lon_min, lat_min], [lon_min, lat_max], [lon_max, lat_max], [lon_max, lat_min]]
 
-# Armo la máscara de la región
+# Se arma la máscara de la región
 region = regionmask.Regions([esquinas])
 mascara = region.mask(ds['lon'], ds['lat'])
 
-# Selecciono la variable HR2 y calculo el valor medio diario
+# Se selecciona la variable HR2 y se calcula el valor medio diario
 HR = ds[['HR2']]
 HR_media = HR.mean(dim = 'time')
 
-# Aplico la máscara eliminando los valores por fuera de ésta
+# Se aplico la máscara eliminando los valores por fuera de ésta
 HR_region = HR_media.where(mascara == 0, drop = True)
 ```
 
 ```python
-# Determino la proyección de los datos
+# Se selecciona la proyección de los datos
 proyeccion = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
                                    central_latitude = ds.CEN_LAT, 
                                    standard_parallels = (ds.TRUELAT1, 
