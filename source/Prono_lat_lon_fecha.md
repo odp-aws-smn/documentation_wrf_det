@@ -1,6 +1,6 @@
 # Pronóstico para una latitud, longitud y fecha determinada
 
-En este ejemplo se describe cómo obtener el pronóstico de una variable específica del dataset (temperatura a 2 m por ejemplo) en una latitud, longitud y fecha dadas. 
+En este ejemplo se describe cómo obtener el pronóstico de una variable específica del dataset (por ejemplo, temperatura a 2 m) en una latitud, longitud y fecha dadas. 
 
 ```python
 import xarray as xr
@@ -65,7 +65,7 @@ data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON,
                                  standard_parallels = (ds.TRUELAT1, ds.TRUELAT2))
 x, y = data_crs.transform_point(longitud, latitud, src_crs=ccrs.PlateCarree())
 
-# Selecciono el dato más cercano a la latitud, longitud y fecha escogida
+# Se selecciona el dato más cercano a la latitud, longitud y fecha escogida
 pronostico = ds.sel(dict(x = x, y = y, time = FECHA_FCST), method = 'nearest')[var]
 
 print(f'El valor pronosticado para la variable {var} en la latitud {latitud} y longitud {longitud} es: {pronostico.values:0.2f}')
@@ -74,4 +74,4 @@ print(f'El valor pronosticado para la variable {var} en la latitud {latitud} y l
     El valor pronosticado para la variable T2 en la latitud -25 y longitud -70 es: 27.21
 
 
-Para descargar la notebook acceder al siguiente [link](../notebooks/Prono_lat_lon_fecha.ipynb)
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Prono_lat_lon_fecha.ipynb).
