@@ -26,14 +26,14 @@ El tipo de proyección utilizada es la [*Confome de Lambert*](https://www2.mmm.u
 
 (\*) Variables calibradas con observaciones de superficie. Para más información consultar la nota técnica [Cutraro y otros, 2020](http://hdl.handle.net/20.500.12160/1405). En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.
 
-En el caso de la Tmin válida para el día X el valor corresponde a la temperatura mínima pronosticada para el día X entre las 00Z y las 12Z.
-Para Tmax el valor del día X corresponde a la temperatura máxima pronosticada entre las 12Z del día X y las 00Z del día X+1.
+En el caso de la Tmin válida para el día X el valor corresponde a la temperatura mínima pronosticada para el día X entre las 00 y las 12 UTC.
+Para Tmax el valor del día X corresponde a la temperatura máxima pronosticada entre las 12 UTC del día X y las 00 UTC del día X+1.
 
-Por ejemplo, el archivo WRFDETAR_24H_20220314_00_001.nc que contiene los datos del ciclo 00Z para el primer plazo de pronóstico (1° día) tendrá la temperatura mínima pronosticada para el día 20220315 entre las 00Z y las 12Z y la temperatura máxima pronosticada para el día 20220315 entre las 12Z y las 00Z del día siguiente.
+Por ejemplo, el archivo WRFDETAR_24H_20220314_00_001.nc que contiene los datos del ciclo 00 UTC para el primer plazo de pronóstico (1° día) tendrá la temperatura mínima pronosticada para el día 20220315 entre las 00 y las 12 UTC y la temperatura máxima pronosticada para el día 20220315 entre las 12 y las 00 UTC del día siguiente.
 
 Para el caso de la PP válida para el día X en el plazo P, el valor corresponde a la precipitación acumulada pronosticada entre el plazo P-1 y P.
 
-Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00Z para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 20220315 entre las 11Z y las 12Z.
+Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00 UTC para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 20220315 entre las 11 y las 12 UTC.
 
 **Variables de coordenadas:**<br />
 |Variable   |Descripción   |Unidad   |Precisión   |
@@ -43,7 +43,3 @@ Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos d
 |x   |Coordenada x   |Metros desde el centro de la proyección   |float32   |
 |lat   |Latitud   |° (convención entre 90° y -90°)   |float32   |
 |lon   |Longitud   |° (convención entre -180° y 180°)   |float32   |
-
-
-
-
