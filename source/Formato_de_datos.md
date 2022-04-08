@@ -38,6 +38,7 @@ Para el caso de la PP válida para el día X en el plazo P, el valor corresponde
 Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00 UTC para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 20220315 entre las 11 y las 12 UTC.
 
 **Variables de coordenadas:**<br />
+Las variables de coordenas presentes en los archivos son las siguientes:
 |Variable   |Descripción   |Unidad   |Precisión   |
 |---|---|---|---|
 |time   |Tiempo   |Horas desde el inicio del ciclo de pronóstico   |int   |
