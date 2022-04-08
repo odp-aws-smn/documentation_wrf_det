@@ -11,7 +11,7 @@ donde los campos entre llaves indican: <br />
 {día} = 2 dígitos para el día <br />
 {ciclo} = 2 dígitos para el ciclo de pronóstico <br />
 {frecuencia} = 2 dígitos para indicar la resolución temporal de los datos. En el caso de datos horarios toma valor 01 y en caso de los diarios 24. <br />
-{plazo} = 3 dígitos para el plazo de pronóstico. Si la frecuencia es 01H la unidad del plazo son horas y si es 24H son días.
+{plazo} = 3 dígitos para el plazo de pronóstico. Si la frecuencia es 01H la unidad del plazo es hora y si es 24H es día.
 
 Ejemplos:
 * /DATA/WRF/DET/2022/03/14/00/WRFDETAR_01H_20220314_00_005.nc corresponde a los pronósticos de las variables horarias inicializados el 14 de marzo de 2022 a las 00 UTC para el plazo 05 horas.
