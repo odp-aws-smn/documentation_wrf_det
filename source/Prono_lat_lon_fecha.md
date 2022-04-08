@@ -3,6 +3,7 @@
 En este ejemplo se describe cómo obtener el pronóstico de una variable específica del dataset (por ejemplo, temperatura a 2 m) en una latitud, longitud y fecha dadas. 
 
 ```python
+# Se importan las librerías necesarias
 import xarray as xr
 import h5netcdf
 import datetime
