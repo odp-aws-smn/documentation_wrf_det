@@ -42,6 +42,8 @@ for s3_file in files:
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 ```
 
+Se obtienen los valores pronosticados en el punto seleccionado:
+
 ```python
 # Se busca la ubicación del punto más cercano a la latitud y longitud solicitada
 data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
@@ -56,7 +58,11 @@ pronostico = ds.sel(dict(x = x, y = y), method = 'nearest')
 T2 = pronostico['T2']
 PP = pronostico['PP']
 fechas = pronostico['time']
+```
 
+Se realiza la figura:
+
+```python
 # Inicio la figura
 fig, ax = plt.subplots(figsize = (10, 8))
 # Duplico el eje x
@@ -79,4 +85,4 @@ plt.tight_layout()
     
 ![png](../figuras/fig_meteograma.png)
     
-Para descargar la notebook acceder al siguiente [link](../notebooks/Meteograma.ipynb)
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Meteograma.ipynb).
