@@ -8,7 +8,7 @@ La descarga de los datos se puede realizar de las siguientes maneras:
 Los archivos pueden ser descargados directamente accediendo al siguiente link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html)
 
 **AWS CLI**<br /> 
-Los datos de S3 se pueden descargar utilizando AWS CLI. Para más información sobre su instalación visitar el siguiente 
+Los datos se pueden descargar utilizando AWS CLI. Para más información sobre su instalación visitar el siguiente 
 [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).<br />
 A continuación se muestra, a modo de ejemplo, la descarga de un archivo individual y de todo el directorio de un día:
 
