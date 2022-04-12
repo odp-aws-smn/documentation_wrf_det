@@ -5,8 +5,8 @@ Los datos se encuentran disponibles en el **portal de AWS**: [https://registry.o
 La descarga de los datos se puede realizar de las siguientes maneras:
 
 **Vía URL**<br />
-Los archivos pueden ser descargados directamente accediendo al siguiente link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html).
-Los datos se almacenan utilizando el Amazon Simple Storage Service (S3). Para más información sobre esta herramienta se pueden visitar https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html.
+Los archivos pueden ser descargados directamente accediendo al siguiente link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html).<br />
+Los datos se almacenan utilizando el Amazon Simple Storage Service (S3). Para más información sobre esta herramienta visitar https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html.
 
 **AWS CLI**<br /> 
 Los datos se pueden descargar utilizando AWS CLI. Para más información sobre su instalación visitar el siguiente 
