@@ -24,4 +24,5 @@ Para cualquier cuestión relacionada con el contenido de este sitio, como pregun
     Tutoriales
     Preguntas_frecuentes
     Novedades
+    Contacto
     Version_ingles 
