@@ -1,10 +1,10 @@
 # Formato de datos
 
-El formato de los archivos es **NetCDF** (de sus siglas en inglés Network Common Data Form). Este es un formato destinado a almacenar datos científicos multidimensionales (variables) como puede ser la temperatura y la humedad. La convención utilizada es la <a href="http://cfconventions.org/" target="_blank">CF</a>. Para más información sobre este formato visitar el siguiente <a href="https://docs.unidata.ucar.edu/netcdf-c/current/index.html" taget="_blank">link</a>.
+El formato de los archivos es **NetCDF** (de sus siglas en inglés Network Common Data Form). Este es un formato destinado a almacenar datos científicos multidimensionales (variables) como puede ser la temperatura y la humedad. La convención utilizada es la <a href="http://cfconventions.org/" target="_blank">CF</a>. Para más información sobre este formato visitar el siguiente <a href="https://docs.unidata.ucar.edu/netcdf-c/current/index.html" target="_blank">link</a>.
 
 
 **Proyección de los datos** <br />
-El tipo de proyección utilizada es la <a href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3/user_guide_V3.9/users_guide_chap3.html">*Confome de Lambert*</a> (retícula no regular). El centro de la retícula se encuentra ubicado en -35° de latitud y -65° de longitud, y la resolución espacial es de 4 km.
+El tipo de proyección utilizada es la <a href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3/user_guide_V3.9/users_guide_chap3.html" target="_blank">*Confome de Lambert*</a> (retícula no regular). El centro de la retícula se encuentra ubicado en -35° de latitud y -65° de longitud, y la resolución espacial es de 4 km.
 
 **Dimensiones**<br />
 Las dimensiones de los datos se encuentra en la siguiente tabla:
@@ -27,7 +27,7 @@ Las variables presentes en los archivos son las siguientes:
 |Tmin   |Temperatura mínima diaria (\*)   |°C   |float32   |
 
 (\*) Variables calibradas con observaciones de superficie. Para más información consultar la nota técnica 
-<a href="http://hdl.handle.net/20.500.12160/1405">Cutraro y otros, 2020</a>. En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.
+<a href="http://hdl.handle.net/20.500.12160/1405" target="_blank">Cutraro y otros, 2020</a>. En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.
 
 En el caso de la Tmin válida para el día X el valor corresponde a la temperatura mínima pronosticada para el día X entre las 00 y las 12 UTC.
 Para Tmax el valor del día X corresponde a la temperatura máxima pronosticada entre las 12 UTC del día X y las 00 UTC del día X+1.
