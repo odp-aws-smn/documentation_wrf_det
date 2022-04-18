@@ -86,4 +86,4 @@ plt.tight_layout()
     
 ![png](../figuras/fig_meteograma.png)
     
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Meteograma.ipynb).
+Para descargar la notebook, acceder al siguiente <a href="../notebooks/Meteograma.ipynb">link</a>.
