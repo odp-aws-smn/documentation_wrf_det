@@ -27,7 +27,7 @@ Las variables presentes en los archivos son las siguientes:
 |Tmin   |Temperatura mínima diaria (\*)   |°C   |float32   |
 
 (\*) Variables calibradas con observaciones de superficie. Para más información consultar la nota técnica 
-<a href="http://hdl.handle.net/20.500.12160/1405" target="_blank">Cutraro y otros, 2020</a>. En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.
+<a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1405" target="_blank">Cutraro y otros, 2020</a>. En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.
 
 En el caso de la Tmin válida para el día X el valor corresponde a la temperatura mínima pronosticada para el día X entre las 00 y las 12 UTC.
 Para Tmax el valor del día X corresponde a la temperatura máxima pronosticada entre las 12 UTC del día X y las 00 UTC del día X+1.
