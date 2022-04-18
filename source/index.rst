@@ -5,16 +5,10 @@
 
 **Pronóstico meteorológico de alta resolución sobre Argentina con el modelo WRF-SMN**
 ====
-|SMN-Arg|
 
-.. |SMN-Arg| raw:: html
+Desde abril de 2022 el Servicio Meteorológico Nacional de Argentina |SMN-Arg| inició una nueva etapa en la disponibilización de sus datos de pronósticos producidos con el modelo WRF-SMN. Gracias a su nueva política de datos establecida en febrero de este año, y al apoyo de Amazon Web Services (AWS) con su programa Open Data Sponsorship Program, el SMN-Arg pone a disposición de los usuarios interesados un número importante de variables meteorológicas pronosticadas.
 
-   <a href="https://www.smn.gob.ar" target="_blank">SMN-Arg</a>
-
-
-Desde abril de 2022 el Servicio Meteorológico Nacional de Argentina (`SMN-Arg <https://www.smn.gob.ar/>`_) inició una nueva etapa en la disponibilización de sus datos de pronósticos producidos con el modelo WRF-SMN. Gracias a su nueva política de datos establecida en febrero de este año, y al apoyo de Amazon Web Services (AWS) con su programa Open Data Sponsorship Program, el SMN-Arg pone a disposición de los usuarios interesados un número importante de variables meteorológicas pronosticadas.
-
-En este sitio puede encontrarse tanto la información general sobre el modelo que genera los pronósticos, información sobre el formato de los datos y su forma de acceso, así como también ejemplos de uso y tutoriales. El portal oficial de AWS es `https://registry.opendata.aws/smn-ar-wrf-dataset/ <https://registry.opendata.aws/smn-ar-wrf-dataset/>`_.
+En este sitio puede encontrarse tanto la información general sobre el modelo que genera los pronósticos, información sobre el formato de los datos y su forma de acceso, así como también ejemplos de uso y tutoriales. El portal oficial de AWS es |https://registry.opendata.aws/smn-ar-wrf-dataset/|.
 
 
 .. toctree::
@@ -30,3 +24,9 @@ En este sitio puede encontrarse tanto la información general sobre el modelo qu
     Novedades
     Contacto
     Version_ingles 
+
+.. |SMN-Arg| raw:: html
+   <a href="https://www.smn.gob.ar" target="_blank">SMN-Arg</a>
+   
+.. |https://registry.opendata.aws/smn-ar-wrf-dataset/| raw:: html
+   <a href="https://registry.opendata.aws/smn-ar-wrf-dataset/" target="_blank">https://registry.opendata.aws/smn-ar-wrf-dataset/</a>
