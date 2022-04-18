@@ -67,4 +67,4 @@ regridder = xe.Regridder(ds, nueva_reticula, 'bilinear')
 ds_interpolado = regridder(ds, keep_attrs = True)
 ```
 
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Regrid.ipynb).
+Para descargar la notebook, acceder al siguiente <a href="../notebooks/Regrid.ipynb">link</a>.
