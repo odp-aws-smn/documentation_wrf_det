@@ -14,4 +14,4 @@ La proyección de los datos es Conforme de Lambert y el dominio abarca todo Arge
 
 ![png](../figuras/dominioWRF4.png)  <br /> *Dominio WRF-Arg*
 
-Más detalles de la configuración se pueden encontrar en el siguiente <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1402" taget="_blank">link</a>.
+Más detalles de la configuración se pueden encontrar en el siguiente <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1402" target="_blank">link</a>.
