@@ -6,7 +6,7 @@
 **Pronóstico meteorológico de alta resolución sobre Argentina con el modelo WRF-SMN**
 ====
 
-Desde abril de 2022 el Servicio Meteorológico Nacional de Argentina |SMN-Arg| inició una nueva etapa en la disponibilización de sus datos de pronósticos producidos con el modelo WRF-SMN. Gracias a su nueva política de datos establecida en febrero de este año, y al apoyo de Amazon Web Services (AWS) con su programa Open Data Sponsorship Program, el SMN-Arg pone a disposición de los usuarios interesados un número importante de variables meteorológicas pronosticadas.
+Desde abril de 2022 el Servicio Meteorológico Nacional de Argentina (|SMN-Arg|) inició una nueva etapa en la disponibilización de sus datos de pronósticos producidos con el modelo WRF-SMN. Gracias a su nueva política de datos establecida en febrero de este año, y al apoyo de Amazon Web Services (AWS) con su programa Open Data Sponsorship Program, el SMN-Arg pone a disposición de los usuarios interesados un número importante de variables meteorológicas pronosticadas.
 
 .. |SMN-Arg| raw:: html
 
