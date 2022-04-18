@@ -115,5 +115,5 @@ plt.colorbar(cbar)
 
 ![png](../figuras/Region.png)
 
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Region.ipynb).
+Para descargar la notebook, acceder al siguiente <a href="../notebooks/Region.ipynb">link</a>.
     
