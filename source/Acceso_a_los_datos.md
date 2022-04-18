@@ -1,16 +1,16 @@
 # Acceso a los datos
 
-Los datos se encuentran disponibles en el **portal de AWS**: [https://registry.opendata.aws/smn-ar-wrf-dataset/](https://registry.opendata.aws/smn-ar-wrf-dataset/).
+Los datos se encuentran disponibles en el **portal de AWS**: <a href="https://registry.opendata.aws/smn-ar-wrf-dataset/">https://registry.opendata.aws/smn-ar-wrf-dataset/</a>.
 
 La descarga de los datos se puede realizar de las siguientes maneras:
 
 **Vía URL**<br />
-Los archivos pueden ser descargados directamente accediendo al siguiente link: [https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html](https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html).<br />
-Los datos se almacenan utilizando el Amazon Simple Storage Service (S3). Para más información sobre esta herramienta visitar [https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html](https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html).
+Los archivos pueden ser descargados directamente accediendo al siguiente link: <a href="https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html">https://smn-ar-wrf.s3-us-west-2.amazonaws.com/index.html</a>.<br />
+Los datos se almacenan utilizando el Amazon Simple Storage Service (S3). Para más información sobre esta herramienta visitar <a href="https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html">https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html</a>.
 
 **AWS CLI**<br /> 
 Los datos se pueden descargar utilizando AWS CLI. Para más información sobre su instalación visitar el siguiente 
-[link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).<br />
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">link</a>.<br />
 A continuación se muestra, a modo de ejemplo, la descarga de un archivo individual y de todo el directorio de un día:
 
 ```bash
@@ -24,7 +24,7 @@ aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recurs
 ```
 
 **Python**<br />
-Para descargar los archivos se utiliza la librería [s3sf](https://pypi.org/project/s3fs/). <br />
+Para descargar los archivos se utiliza la librería <a href="https://pypi.org/project/s3fs/">s3sf</a>. <br />
 A continuación se muestra, a modo de ejemplo, la descarga del archivo de un día:
 
 
