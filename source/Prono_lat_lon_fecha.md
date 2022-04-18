@@ -75,4 +75,4 @@ print(f'El valor pronosticado para la variable {var} en la latitud {latitud} y l
     El valor pronosticado para la variable T2 en la latitud -25 y longitud -70 es: 27.21
 
 
-Para descargar la notebook, acceder al siguiente <a href=../notebooks/Prono_lat_lon_fecha.ipynb">link</a>.
+Para descargar la notebook, acceder al siguiente <a href="../notebooks/Prono_lat_lon_fecha.ipynb">link</a>.
