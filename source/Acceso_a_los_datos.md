@@ -24,9 +24,8 @@ aws s3 cp --no-sign-request s3://smn-ar-wrf/DATA/WRF/DET/2022/03/21/00/ --recurs
 ```
 
 **Python**<br />
-Para descargar los archivos se utiliza la librería <a href="https://pypi.org/project/s3fs/" target="_blank">s3sf</a>. <br />
+Para descargar los archivos se utiliza la librería <a href="https://pypi.org/project/s3fs/" target="_blank">s3fs</a>. <br />
 A continuación se muestra, a modo de ejemplo, la descarga del archivo de un día:
-
 
 ```python
 import s3fs
