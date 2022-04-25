@@ -89,3 +89,4 @@ regridder = xe.Regridder(ds, new_grid, 'bilinear')
 ds_interpolated = regridder(ds, keep_attrs = True)
 ```
 Para descargar la notebook, acceder al siguiente [link](../notebooks/Regrid_bilingue.ipynb).
+*To download the notebook, go to the following [link](../notebooks/Regrid_bilingue.ipynb).*
