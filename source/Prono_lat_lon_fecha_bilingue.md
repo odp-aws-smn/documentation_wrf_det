@@ -96,5 +96,5 @@ print(f'The forecast value for the variable {var} at latitude {latitude} and lon
 
     The forecast value for the variable T2 at latitude -25 and longitude -70 is: 24.44
 
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Prono_lat_lon_fecha_bilingue.ipynb).
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Prono_lat_lon_fecha_bilingue.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/Prono_lat_lon_fecha_bilingue.ipynb).*
