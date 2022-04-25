@@ -9,7 +9,7 @@ Tutoriales
 .. toctree::
     :maxdepth: 2
 
-    Prono_lat_lon_fecha
-    Meteograma
-    Region
-    Regrid
+    Prono_lat_lon_fecha_bilingue
+    Meteograma_bilingue
+    Region_bilingue
+    Regrid_bilingue
