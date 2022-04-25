@@ -151,8 +151,7 @@ gl.top_labels = False
 gl.right_labels = False
 plt.colorbar(cbar)
 ```
-
    
-![png](figuras/Region_bilingue_14_2.png)
+![png](../figuras/Region_bilingue_14_2.png)
     
-
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Region_bilingue.ipynb).
