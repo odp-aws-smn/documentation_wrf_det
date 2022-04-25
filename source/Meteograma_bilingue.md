@@ -121,6 +121,6 @@ plt.tight_layout()
 
 
     
-![png](Meteograma_bilingue_files/Meteograma_bilingue_10_0.png)
+![png](figuras/Meteograma_bilingue_10_0.png)
     
 
