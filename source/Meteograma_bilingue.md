@@ -121,5 +121,5 @@ plt.tight_layout()
     
 ![png](../figuras/Meteograma_bilingue_10_0.png)
     
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Meteograma_bilingue.ipynb).
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Meteograma_bilingue.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/Meteograma_bilingue.ipynb).*
