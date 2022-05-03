@@ -44,7 +44,7 @@ Leemos el archivo que posee el dato buscado:<br />
 
 
 ```python
-# Opción 1: Para acceder a los archivos online (FEDE REVISA ESTO!!!)
+# Opción 1: Para acceder a los archivos online
 # Option 1: To access files online
 #import s3fs
 #s3_file = f'smn-ar-wrf/DATA/WRF/DET/{START_DATE:%Y/%m/%d/%H}/WRFDETAR_01H_{START_DATE:%Y%m%d_%H}_{leadtime:03d}.nc'
