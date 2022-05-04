@@ -9,7 +9,7 @@ Los archivos pueden ser descargados directamente accediendo al siguiente link: <
 Los datos se almacenan utilizando el Amazon Simple Storage Service (S3). Para más información sobre esta herramienta visitar <a href="https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html" target="_blank">https://docs.aws.amazon.com/es_es/AmazonS3/latest/userguide/Welcome.html</a>.
 
 **AWS CLI**<br /> 
-Los datos se pueden descargar utilizando AWS CLI. Para más información sobre su instalación visitar el siguiente 
+Los datos se pueden descargar utilizando la herramienta AWS Command Line Interface (CLI). Para más información sobre su instalación visitar el siguiente 
 <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank">link</a>.<br />
 A continuación se muestra, a modo de ejemplo, la descarga de un archivo individual y de todo el directorio de un día:
 
