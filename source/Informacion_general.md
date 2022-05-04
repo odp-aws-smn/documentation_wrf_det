@@ -1,6 +1,6 @@
 # Información general
 
-El SMN-Arg corre en forma operativa el modelo regional de alta resolución Weather Research and Forecasting Model (WRF) en su versión con núcleo dinámico Advanced Research WRF (ARW) version 4.0 (<a href="https://www2.mmm.ucar.edu/wrf/users/docs/technote/v4_technote.pdf" target="_blank">Skamarock et al. 2019</a>). El modelo resuelve la convección en forma explícita con paso de tiempo variable y fue configurado utilizando las siguientes parametrizaciones: <br />
+El SMN-Arg corre en forma operativa el modelo regional de alta resolución Weather Research and Forecasting Model (WRF) en su versión 4.0 con núcleo dinámico Advanced Research WRF (ARW) (<a href="https://www2.mmm.ucar.edu/wrf/users/docs/technote/v4_technote.pdf" target="_blank">Skamarock et al. 2019</a>). El modelo resuelve la convección en forma explícita con paso de tiempo variable y fue configurado utilizando las siguientes parametrizaciones: <br />
 - Microfísica: WSM6 (un momento - 6 clases)
 - Radiación onda larga: RRTM
 - Radiación onda corta: Dudhia
