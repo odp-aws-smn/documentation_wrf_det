@@ -10,8 +10,8 @@ El SMN-Arg corre en forma operativa el modelo regional de alta resolución Weath
 Los pronósticos horarios generados con el modelo WRF-SMN cuentan con una resolución horizontal de 4 km con 45 niveles verticales (tope 10 hPa) y plazo máximo de 72 horas. Los mismos se inicializan con los análisis y pronósticos horarios del NCEP-NOAA Global Forecasting System Model 
 (<a href="https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs.php" target="_blank">GFS</a>) de 0,25° de resolución horizontal.<br />
 
-La proyección de los datos es Conforme de Lambert y el dominio abarca todo Argentina como se puede apreciar en la siguiente figura: <br />
+La proyección de los datos es Conforme de Lambert y el dominio abarca el sur de Sudamérica, incluyendo Argentina y los océanos adyacentes, como se puede apreciar en la siguiente figura: <br />
 
-![png](../figuras/dominioWRF4.png)  <br /> *Dominio WRF-Arg*
+![png](../figuras/dominioWRF4.png)  <br /> *Dominio WRF-Arg: *
 
 Más detalles de la configuración se pueden encontrar en el siguiente <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1402" target="_blank">link</a>.
