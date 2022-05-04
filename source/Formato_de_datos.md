@@ -16,15 +16,15 @@ Las dimensiones de los datos se encuentra en la siguiente tabla:
 
 **Variables**<br />
 Las variables presentes en los archivos son las siguientes: 
-|Variable   |Descripción   |Unidad   |Precisión   |
-|---|---|---|---|
-|PP   |Precipitación acumulada en un período de tiempo   |mm   |float32   |
-|HR2   |Humedad relativa a 2 metros   |%   |float32   |
-|T2   |Temperatura a 2 metros (\*)   |°C   |float32   |
-|dirViento10   |Dirección del viento a 10 metros   |°   |float32   |
-|magViento10   |Magnitud del viento a 10 metros (\*)   |m/s   |float32   |
-|Tmax   |Temperatura máxima diaria (\*)   |°C   |float32   |
-|Tmin   |Temperatura mínima diaria (\*)   |°C   |float32   |
+|Variable   |Descripción   |Unidad   |Precisión   |Frecuencia   |
+|---|---|---|---|---|
+|PP   |Precipitación acumulada en un período de tiempo   |mm   |float32   |01H   |
+|HR2   |Humedad relativa a 2 metros   |%   |float32   |01H   |
+|T2   |Temperatura a 2 metros (\*)   |°C   |float32   |01H   |
+|dirViento10   |Dirección del viento a 10 metros   |°   |float32   |01H   |
+|magViento10   |Magnitud del viento a 10 metros (\*)   |m/s   |float32   |01H   |
+|Tmax   |Temperatura máxima diaria (\*)   |°C   |float32   |24H   |
+|Tmin   |Temperatura mínima diaria (\*)   |°C   |float32   |24H   |
 
 (\*) Variables calibradas con observaciones de superficie. Para más información consultar la nota técnica 
 <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1405" target="_blank">Cutraro y otros, 2020</a>. En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.
