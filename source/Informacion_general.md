@@ -12,6 +12,6 @@ Los pronósticos horarios generados con el modelo WRF-SMN cuentan con una resolu
 
 La proyección de los datos es Conforme de Lambert y el dominio abarca el sur de Sudamérica, incluyendo Argentina y los océanos adyacentes, como se puede apreciar en la siguiente figura: <br />
 
-![png](../figuras/Figura_dominio_AWS.png)  <br /> Dominio WRF-Arg delimitado por contorno rojo
+![png](../figuras/Figura_dominio_AWS.png)  <br /> _Dominio WRF-Arg delimitado por contorno rojo_
 
 Más detalles de la configuración se pueden encontrar en el siguiente <a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1402" target="_blank">link</a>.
