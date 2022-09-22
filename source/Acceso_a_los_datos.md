@@ -35,3 +35,46 @@ fs = s3fs.S3FileSystem(anon=True)
 data = fs.get(s3_file)
 ```
 
+**R**<br />
+Para descargar los archivos se utiliza la librería aws.s3. <br />
+A continuación se muestra, a modo de ejemplo, la descarga de todos los archivos de un día:
+```R
+library("aws.s3")
+ 
+# Se define la función wrf.download para descarga de archivos
+wrf.download <- function(wrf.name = wrf.name){
+      save_object(
+      object = paste0(wrf.name),
+      bucket = "s3://smn-ar-wrf/",
+      region = "us-west-2",
+      file = substring(wrf.name, 28),
+      overwrite = TRUE)}
+
+# Se define la fecha de los datos a descargar
+anual = 2022
+mes = 9
+dia = 3
+ciclo = 0
+time = "01H"   # Frecuencia del pronóstico a descargar (formato character)
+
+# Se convierten en formato character de año, mes, día y ciclo
+anual <- sprintf("%04d", anual)
+mes <- sprintf("%02d", mes)
+dia <- sprintf("%02d", dia)
+ciclo <- sprintf("%02d", ciclo)
+ 
+# Se definen los nombres de los archivos del Bucket a descargar
+wrf.names <- get_bucket_df(
+    bucket = "s3://smn-ar-wrf/",
+    prefix = paste0("DATA/WRF/DET/", anual, "/", mes, "/", dia, "/", ciclo),
+    max = Inf,
+    region = "us-west-2")
+ 
+# Se selecciona la frecuencia de datos a descargar (01H o 24H)
+wrf.names.rows <- which(grepl(time, wrf.names$Key, fixed = TRUE) == TRUE)
+wrf.names <- wrf.names[wrf.names.rows, ]
+ 
+# Se ejecuta la función wrf.download 
+lapply(wrf.names$Key, FUN = wrf.download)
+
+```
