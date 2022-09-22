@@ -31,5 +31,5 @@ En este sitio puede encontrarse tanto la información general sobre el modelo qu
     Preguntas_frecuentes
     Novedades
     Contacto
-    Version_ingles
+    English_version
     
