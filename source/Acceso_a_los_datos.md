@@ -70,7 +70,6 @@ wrf.names <- get_bucket_df(
     max = Inf,
     region = "us-west-2")
  
-# Se selecciona la frecuencia de datos a descargar (01H o 24H)
 wrf.names.rows <- which(grepl(time, wrf.names$Key, fixed = TRUE) == TRUE)
 wrf.names <- wrf.names[wrf.names.rows, ]
  
