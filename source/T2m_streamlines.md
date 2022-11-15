@@ -1,12 +1,14 @@
 # Campo de temperatura a 2m y líneas de corriente 
 
-[![Vídeo del tutorial](https://img.youtube.com/vi/ad3TSJQPTww/0.jpg)](https://www.youtube.com/watch?v=ad3TSJQPTww)
-
-
-
 Ejemplo para graficar un campo de temperatura a 2m y líneas de corriente. <br />
-*Example to plot a 2-m temperatura and streamlines.
+*Example to plot a 2-m temperatura and streamlines.*
 
+Video del tutorial: <br />
+*Tutorial video:* <br />
+<br />
+[![Video del tutorial](https://yt-embed.herokuapp.com/embed?v=ad3TSJQPTww)](https://www.youtube.com/watch?v=ad3TSJQPTww "Video del tutorial")
+
+Tutorial:
 
 ```python
 # Importamos las librerías necesarias  (en caso de ser necesario, instalar utilizando el comando pip install)
