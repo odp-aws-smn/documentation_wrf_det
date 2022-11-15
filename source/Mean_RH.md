@@ -1,12 +1,12 @@
-# Gráfico de una región
+# Campo de humedad relativa media diaria
 
-Ejemplo para el cálculo de la humedad relativa media en una región. <br />
-*Example of the mean relative humidity field over a user-defined region.*
+Ejemplo para el cálculo de la humedad relativa media en una subregión. <br />
+*Example of the mean relative humidity field over a user-defined subregion.*
 
 
 ```python
-# Importamos las librerías necesarias
-# We import the necessary libraries
+# Importamos las librerías necesarias  (en caso de ser necesario, instalar utilizando el comando pip install)
+# We import the necessary libraries    (if needed, install by using the command pip install)
 import xarray as xr
 import h5netcdf
 import datetime
@@ -22,35 +22,20 @@ Definimos la fecha y hora de inicialización del pronóstico: <br />
 
 
 ```python
-fcst_year = 2022
-fcst_month = 4
-fcst_day = 1
-fcst_hour = 0
+init_year = 2022
+init_month = 4
+init_day = 1
+init_hour = 0
+INIT_DATE = datetime.datetime(init_year, init_month, init_day, init_hour)
 ```
 
-Definimos la fecha y hora de inicialización del pronóstico: <br />
+Definimos el periodo de tiempo sobre el cual se calcula la humedad relativa media: <br />
 *We define the averaging period for relative humidity:*
 
 
 ```python
-start_year = 2022
-start_month = 4
-start_day = 1
-start_hour = 0
-final_year = 2022
-final_month = 4
-final_day = 1
-final_hour = 23
-
-FCST_DATE = datetime.datetime(start_year, start_month, start_day, start_hour)
-
-START_DATE = datetime.datetime(start_year, start_month, start_day, start_hour)
-FINAL_DATE = datetime.datetime(final_year, final_month, final_day, final_hour)
-
-# Calculamos el plazo de pronóstico
-# We calculate the forecast lead time
-start_fhr = int((START_DATE - FCST_DATE).total_seconds()/3600)
-final_fhr = int((FINAL_DATE - FCST_DATE).total_seconds()/3600)
+start_lead_time = 0
+end_lead_time = 47
 ```
 
 Definimos la región a graficar: <br />
@@ -86,8 +71,7 @@ Leemos los pronósticos: <br />
 
 # Opción 2: Para abrir los archivos ya descargados
 # Option 2: To open the already downloaded files
-print(START_DATE)
-files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(START_DATE,fhr) for fhr in range(start_fhr, final_fhr)]
+files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) for lead_time in range(start_lead_time, end_lead_time)]
 print(files)
 ds_list = []
 for filename in files:
@@ -143,7 +127,7 @@ ax = plt.axes(projection = proyection)
 cbar = ax.pcolormesh(HR_region['lon'], HR_region['lat'], HR_region['HR2'], transform = ccrs.PlateCarree(), vmin = 0, vmax = 100)
 ax.add_feature(cf.COASTLINE) # add coastlines
 ax.add_feature(cf.BORDERS)   # add country borders
-ax.set_title(f'Mean Relative Humidity')
+ax.set_title(f'Mean Relative Humidity [%]')
 
 gl = ax.gridlines(crs = ccrs.PlateCarree(), draw_labels = True, x_inline = False,
                   linewidth = 2, color = 'gray', alpha = 0.5, linestyle = '--')
@@ -151,8 +135,10 @@ gl.top_labels = False
 gl.right_labels = False
 plt.colorbar(cbar)
 ```
-   
-![png](../figuras/Region_bilingue_14_2.png)
+
+
+
+![png](../figuras/Mean_RH.png)
     
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Region_bilingue.ipynb). <br />
-*To download the notebook, go to the following [link](../notebooks/Region_bilingue.ipynb).*
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Mean_RH.ipynb). <br />
+*To download the notebook, go to the following [link](../notebooks/Mean_RH.ipynb).*

@@ -20,7 +20,7 @@ En este sitio puede encontrarse tanto la información general sobre el modelo qu
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: Contenido:
 
     Informacion_general

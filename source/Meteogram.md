@@ -19,15 +19,14 @@ Definimos la fecha de inicialización del pronóstico y la latitud y longitud a 
 
 
 ```python
+init_year = 2022
+init_month = 4
+init_day = 1
+init_hour = 0
+INIT_DATE = datetime.datetime(init_year, init_month, init_day, init_hour)
+
 latitude = -40
 longitude = -50
-
-start_year = 2022
-start_month = 4
-start_day = 1
-start_hour = 0
-
-START_DATE = datetime.datetime(start_year, start_month, start_day, start_hour)
 ```
 
 Leemos los pronósticos: <br />
@@ -52,7 +51,7 @@ Leemos los pronósticos: <br />
 
 # Opción 2: Para abrir los archivos ya descargados
 # Option 2: To open the already downloaded files
-files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(START_DATE,fhr) for fhr in range(0, 73)]
+files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) for lead_time in range(0, 73)]
 ds_list = []
 for file in files:
     print(file)
@@ -83,7 +82,8 @@ forecast = ds.sel(dict(x = x, y = y), method = 'nearest')
 # We get of time series for the 2-m temperature, accumulated precipitation and dates
 T2 = forecast['T2']
 PP = forecast['PP']
-dates = forecast['time']
+dates = forecast['time'].values
+
 ```
 
 Realizamos la figura:<br /> 
@@ -99,7 +99,7 @@ fig, ax = plt.subplots(figsize = (10, 8))
 ax2 = ax.twinx()
 # Graficamos la precipitación en barras
 # We choose bar diagram for precipitation 
-ax.bar(dates, PP, color = 'blue', width = 0.03, label = 'Acum Precip')
+ax.bar(dates, PP, color = 'blue', width = 0.03, label = 'Acc Precip')
 # Graficamos la temperatura con una línea
 # We choose simple lines for temperature
 ax2.plot(dates, T2, color = 'red', label = '2-m Temp', linewidth = 3)
@@ -118,8 +118,9 @@ fig.legend(loc = 'upper right')
 # We adjuste graphic size
 plt.tight_layout()
 ```
+
+
+![png](../figuras/Meteogram.png)
     
-![png](../figuras/Meteograma_bilingue_10_0.png)
-    
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Meteograma_bilingue.ipynb). <br />
-*To download the notebook, go to the following [link](../notebooks/Meteograma_bilingue.ipynb).*
+Para descargar la notebook, acceder al siguiente [link](../notebooks/Meteogram.ipynb). <br />
+*To download the notebook, go to the following [link](../notebooks/Meteogram.ipynb).*

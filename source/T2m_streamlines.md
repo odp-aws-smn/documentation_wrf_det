@@ -1,7 +1,7 @@
-# Ejemplo para graficar un campo de temperatura a 2m y líneas de corriente
+# Campo de temperatura a 2m y líneas de corriente 
 
 Ejemplo para graficar un campo de temperatura a 2m y líneas de corriente. <br />
-*Example to plot a 2-m temperatura and streamlines.*
+*Example to plot a 2-m temperatura and streamlines.*[texto del enlace](https://)
 
 
 ```python
@@ -23,10 +23,10 @@ Definimos la fecha y hora de inicialización del pronóstico: <br />
 
 ```python
 init_year = 2022
-init_month = 10
-init_day = 27
+init_month = 4
+init_day = 1
 init_hour = 0
-START_DATE = datetime.datetime(init_year, init_month, init_day, init_hour)
+INIT_DATE = datetime.datetime(init_year, init_month, init_day, init_hour)
 ```
 
 Definimos el plazo de pronóstico a graficar: <br />
@@ -42,13 +42,10 @@ Leemos el archivo: <br />
 
 
 ```python
-filename = 'WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(START_DATE,lead_time) 
+filename = 'WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) 
 print(filename)
 ds = xr.open_dataset(filename, decode_coords = 'all', engine = 'h5netcdf')
 ```
-
-    WRFDETAR_01H_20221027_00_012.nc
-
 
 Calculamos las componentes zonal y meridional del viento a 10m: <br />
 *We calculate the zonal and meridional components of 10-m wind:*
@@ -85,12 +82,23 @@ gl = ax.gridlines(crs = ccrs.PlateCarree(), draw_labels = True, x_inline = False
                   linewidth = 2, color = 'gray', alpha = 0.5, linestyle = '--')
 gl.top_labels = False
 gl.right_labels = False
-plt.colorbar(cs, shrink = 0.6)
+cbar = plt.colorbar(cs, shrink = 0.6)
+cbar.set_label('[°C]', rotation=90)
 plt.show()
 ```
 
-![png](../figuras/T2m_streamlines.png)
-    
-Para descargar la notebook, acceder al siguiente [link](../notebooks/Plot_Region.ipynb). <br />
-*To download the notebook, go to the following [link](../notebooks/Plot_Region.ipynb).*
+    /usr/local/lib/python3.7/dist-packages/cartopy/mpl/geoaxes.py:1703: UserWarning: The input coordinates to pcolormesh are interpreted as cell centers, but are not monotonically increasing or decreasing. This may lead to incorrectly calculated cell edges, in which case, please supply explicit cell edges to pcolormesh.
+      shading=shading)
+    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:228: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
+      if len(multi_line_string) > 1:
+    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:280: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
+      for line in multi_line_string:
+    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:347: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
+      if len(p_mline) > 0:
 
+
+
+![png](../figuras/2mTemp_streamlines.png)
+    
+Para descargar la notebook, acceder al siguiente [link](../notebooks/T2m_streamlines.ipynb). <br />
+*To download the notebook, go to the following [link](../notebooks/T2m_streamlines.ipynb).*

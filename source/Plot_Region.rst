@@ -9,7 +9,5 @@ Tutoriales
 .. toctree::
     :maxdepth: 2
 
-    Get_lat_lon_fecha
-    Meteogram
-    Plot_Region
-    Regrid
+    Mean_RH
+    T2m_streamlines
