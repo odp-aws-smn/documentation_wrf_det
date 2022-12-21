@@ -27,6 +27,8 @@ Las variables presentes en los archivos son las siguientes:
 |ACLWDNB   |Radiación de onda larga entrante (\**)   |J/m2   |float32   |01H   |
 |ACLWUPB   |Radiación de onda larga saliente (\**)   |J/m2   |float32   |01H   |
 |ACSWDNB   |Radiación de onda corta entrante (\**)   |J/m2   |float32   |01H   |
+|TSLB   |Temperatura de suelo en la capa 0-10cm  |°C   |float32   |01H   |
+|SMOIS   |Humedad de suelo en la capa 0-10cm  |m3/m3   |float32   |01H   |
 |Tmax   |Temperatura máxima diaria (\*)   |°C   |float32   |24H   |
 |Tmin   |Temperatura mínima diaria (\*)   |°C   |float32   |24H   |
 
