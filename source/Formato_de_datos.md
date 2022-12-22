@@ -18,7 +18,8 @@ Las dimensiones de los datos se encuentra en la siguiente tabla:
 Las variables presentes en los archivos son las siguientes: 
 |Variable   |Descripción   |Unidad   |Precisión   |Frecuencia   |
 |---|---|---|---|---|
-|PP   |Precipitación acumulada en un período de tiempo   |mm   |float32   |01H   |
+|PP   |Precipitación acumulada en 10 miuntos   |mm   |float32   |10M   |
+|PP   |Precipitación acumulada en una hora  |mm   |float32   |01H   |
 |HR2   |Humedad relativa a 2 metros   |%   |float32   |01H   |
 |T2   |Temperatura a 2 metros (\*)   |°C   |float32   |01H   |
 |dirViento10   |Dirección del viento a 10 metros   |°   |float32   |01H   |
@@ -43,7 +44,7 @@ Por ejemplo, el archivo WRFDETAR_24H_20220314_00_001.nc que contiene los datos d
 
 Para el caso de la PP válida para el día X en el plazo P, el valor corresponde a la precipitación acumulada pronosticada entre el plazo P-1 y P.
 
-Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00 UTC para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 20220315 entre las 11 y las 12 UTC.
+Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00 UTC para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 15 de marzo de 2022 entre las 11 y las 12 UTC. En el caso del archivo WRFDETAR_10M_20220314_00_036.nc contiene los datos de precipitación acumulada cada 10 minutos entre las 11 y 12 UTC.
 
 **Variables de coordenadas:**<br />
 Las variables de coordenas presentes en los archivos son las siguientes:
