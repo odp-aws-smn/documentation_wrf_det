@@ -1,6 +1,7 @@
 # Meteograma
 
 (Última actualización 10 abr 2023)<br />
+
 En este ejemplo discribimos como hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en todos los plazos de pronóstico para una latitud y longitud determinada.<br />
 *In this example we describe how to plot the hourly evolution of 2-m temperature and precipitation for a given place.*
 
