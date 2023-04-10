@@ -1,5 +1,7 @@
 # Pronóstico para una latitud, longitud y fecha determinada
 
+(Última actualización 10 abr 2023) <br />
+
 En este ejemplo se describe cómo obtener el pronóstico de una variable específica del dataset (temperatura a 2 m por ejemplo) en una latitud, longitud y fecha dadas. <br />
 *In this example we show how to obtain the forecast of a specific variable (2-meter temperature for example) for a given latitude, longitude and date.*
 
@@ -75,9 +77,9 @@ Obtenemos el valor pronosticado: <br />
 # Buscamos la ubicación del punto más cercano a la latitud y longitud solicitada
 # We search the closest gridpoint to the selected lat-lon 
 
-data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
-                                 central_latitude = ds.CEN_LAT, 
-                                 standard_parallels = (ds.TRUELAT1, ds.TRUELAT2))
+data_crs = ccrs.LambertConformal(central_longitude = ds['Lambert_Conformal'].attrs['longitude_of_central_meridian'], 
+                                 central_latitude = ds['Lambert_Conformal'].attrs['latitude_of_projection_origin'], 
+                                 standard_parallels = ds['Lambert_Conformal'].attrs['standard_parallel'])
 x, y = data_crs.transform_point(longitude, latitude, src_crs=ccrs.PlateCarree())
 
 # Seleccionamos el dato mas cercano a la latitud, longitud y fecha escogida
@@ -91,8 +93,8 @@ print(f'The forecast value for the variable {var} at latitude {latitude} and lon
 
     The forecast value for the variable T2 at latitude -25 and longitude -70 is: 26.33°C
 
-
-```
-
+    
 Para descargar la notebook, acceder al siguiente [link](../notebooks/Get_lat_lon_fecha.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/Get_lat_lon_fecha.ipynb).*
+
+

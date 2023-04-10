@@ -1,5 +1,6 @@
 # Meteograma
 
+(Última actualización 10 abr 2023)<br />
 En este ejemplo discribimos como hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en todos los plazos de pronóstico para una latitud y longitud determinada.<br />
 *In this example we describe how to plot the hourly evolution of 2-m temperature and precipitation for a given place.*
 
@@ -69,9 +70,9 @@ Obtenemos los valores pronosticados en el punto seleccionado:<br />
 ```python
 # Buscamos la ubicación del punto más cercano a la latitud y longitud solicitada
 # We search the closest gridpoint to the selected lat-lon 
-data_crs = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
-                                 central_latitude = ds.CEN_LAT, 
-                                 standard_parallels = (ds.TRUELAT1, ds.TRUELAT2))
+data_crs = ccrs.LambertConformal(central_longitude = ds['Lambert_Conformal'].attrs['longitude_of_central_meridian'], 
+                                 central_latitude = ds['Lambert_Conformal'].attrs['latitude_of_projection_origin'], 
+                                 standard_parallels = ds['Lambert_Conformal'].attrs['standard_parallel'])
 x, y = data_crs.transform_point(longitude, latitude, src_crs=ccrs.PlateCarree())
 
 # Seleccionamos el dato más cercano a la latitud y longitud
@@ -121,6 +122,8 @@ plt.tight_layout()
 
 
 ![png](../figuras/Meteogram.png)
-    
+
 Para descargar la notebook, acceder al siguiente [link](../notebooks/Meteogram.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/Meteogram.ipynb).*
+
+

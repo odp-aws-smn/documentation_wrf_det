@@ -1,5 +1,7 @@
 # Campo de humedad relativa media diaria
 
+(Última actualización 10 abr 2023) <br />
+
 Ejemplo para el cálculo de la humedad relativa media en una subregión. <br />
 *Example of the mean relative humidity field over a user-defined subregion.*
 
@@ -117,10 +119,9 @@ Generamos la figura: <br />
 ```python
 # Seleccionamos la proyección de los datos
 # We chose a map projection
-proyection = ccrs.LambertConformal(central_longitude = ds.CEN_LON, 
-                                   central_latitude = ds.CEN_LAT, 
-                                   standard_parallels = (ds.TRUELAT1, 
-                                                         ds.TRUELAT2))
+proyection = ccrs.LambertConformal(central_longitude = ds['Lambert_Conformal'].attrs['longitude_of_central_meridian'], 
+                                   central_latitude = ds['Lambert_Conformal'].attrs['latitude_of_projection_origin'], 
+                                   standard_parallels = ds['Lambert_Conformal'].attrs['standard_parallel'])
 
 fig = plt.figure(figsize = (10, 8)) 
 ax = plt.axes(projection = proyection)
@@ -137,8 +138,8 @@ plt.colorbar(cbar)
 ```
 
 
-
 ![png](../figuras/Mean_RH.png)
     
 Para descargar la notebook, acceder al siguiente [link](../notebooks/Mean_RH.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/Mean_RH.ipynb).*
+

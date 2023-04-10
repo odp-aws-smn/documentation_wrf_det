@@ -1,15 +1,9 @@
 # Campo de temperatura a 2m y líneas de corriente 
 
+(Última actualización 10 abr 2023) <br />
 Ejemplo para graficar un campo de temperatura a 2m y líneas de corriente. <br />
-*Example to plot a 2-m temperatura and streamlines.*
+*Example to plot a 2-m temperatura and streamlines.*[texto del enlace](https://)
 
-Video del tutorial: <br />
-*Tutorial video:* <br />
-<br />
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ad3TSJQPTww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Tutorial:
 
 ```python
 # Importamos las librerías necesarias  (en caso de ser necesario, instalar utilizando el comando pip install)
@@ -76,7 +70,10 @@ Generamos la figura: <br />
 # Seleccionamos la proyección de los datos
 # We chose a map projection
 
-projection = ccrs.LambertConformal(ds.CEN_LON, ds.CEN_LAT, standard_parallels = (ds.TRUELAT1, ds.TRUELAT2), cutoff = -5)
+projection = ccrs.LambertConformal(ds['Lambert_Conformal'].attrs['longitude_of_central_meridian'], 
+                                   ds['Lambert_Conformal'].attrs['latitude_of_projection_origin'], 
+                                   standard_parallels = ds['Lambert_Conformal'].attrs['standard_parallel'], 
+                                   cutoff = -5)
 
 fig, ax = plt.subplots(1, 1, figsize = (7, 10), constrained_layout = True, subplot_kw = {'projection': projection})
 ax.set_extent(extents=[-500*4000, 500*4000, -600*4000, 600*4000], crs = projection)
@@ -94,18 +91,12 @@ cbar.set_label('[°C]', rotation=90)
 plt.show()
 ```
 
-    /usr/local/lib/python3.7/dist-packages/cartopy/mpl/geoaxes.py:1703: UserWarning: The input coordinates to pcolormesh are interpreted as cell centers, but are not monotonically increasing or decreasing. This may lead to incorrectly calculated cell edges, in which case, please supply explicit cell edges to pcolormesh.
-      shading=shading)
-    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:228: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
-      if len(multi_line_string) > 1:
-    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:280: ShapelyDeprecationWarning: Iteration over multi-part geometries is deprecated and will be removed in Shapely 2.0. Use the `geoms` property to access the constituent parts of a multi-part geometry.
-      for line in multi_line_string:
-    /usr/local/lib/python3.7/dist-packages/cartopy/crs.py:347: ShapelyDeprecationWarning: __len__ for multi-part geometries is deprecated and will be removed in Shapely 2.0. Check the length of the `geoms` property instead to get the  number of parts of a multi-part geometry.
-      if len(p_mline) > 0:
 
+![png](../figuras/T2m_streamlines.png)
 
-
-![png](../figuras/2mTemp_streamlines.png)
-    
 Para descargar la notebook, acceder al siguiente [link](../notebooks/T2m_streamlines.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/T2m_streamlines.ipynb).*
+
+
+
+
