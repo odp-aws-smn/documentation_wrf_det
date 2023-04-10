@@ -1,5 +1,7 @@
 # Campo diario de evapotranspiración de referencia
 
+(Última actualización 10 abr 2023)<br />
+
 Ejemplo para calcular la evapotranspiración de referencia (ET0). <br />
 *Example to calculate the reference evapotranspiration(ET0).*
 
