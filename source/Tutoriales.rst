@@ -6,9 +6,11 @@
 Tutoriales
 ==========
 
+**ACLARACIÓN IMPORTANTE: Tener en consideración que las librerías de Python necesarias para ejecutar los siguientes tutoriales pueden sufrir actualizaciones afectando la compatibilidad entre las mismas.**
+
 .. toctree::
     :maxdepth: 2
-
+    
     Get_lat_lon_fecha
     Meteogram
     Mapas
