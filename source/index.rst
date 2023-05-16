@@ -30,7 +30,7 @@ En este sitio puede encontrarse tanto la información general sobre el modelo qu
     Tutoriales
     Preguntas_frecuentes
     Novedades
-    Suscripción_a_novedades
+    Suscripcion_a_novedades
     Contacto
     English_version
     
