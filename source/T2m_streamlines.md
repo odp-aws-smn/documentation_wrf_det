@@ -5,6 +5,13 @@
 Ejemplo para graficar un campo de temperatura a 2m y líneas de corriente. <br />
 *Example to plot a 2-m temperatura and streamlines.*
 
+Video del tutorial: <br />
+*Tutorial video:* <br />
+<br />
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ad3TSJQPTww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Tutorial:
 
 ```python
 # Importamos las librerías necesarias  (en caso de ser necesario, instalar utilizando el comando pip install)
@@ -93,7 +100,7 @@ plt.show()
 ```
 
 
-![png](../figuras/T2m_streamlines.png)
+![png](../figuras/2mTemp_streamlines.png)
 
 Para descargar la notebook, acceder al siguiente [link](../notebooks/T2m_streamlines.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/T2m_streamlines.ipynb).*
