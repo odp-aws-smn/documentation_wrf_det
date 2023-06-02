@@ -9,7 +9,7 @@ donde los campos entre llaves indican: <br />
 {año} = 4 dígitos para el año <br />
 {mes} = 2 dígitos para el mes <br />
 {día} = 2 dígitos para el día <br />
-{inicialización} = 2 dígitos para la hora de inicialización del ciclo de pronóstico (00 ó 12) <br />
+{inicialización} = 2 dígitos para la hora de inicialización del ciclo de pronóstico (00, 06, 12 ó 18) <br />
 {frecuencia} = 2 dígitos para indicar la resolución temporal de los datos y una letra que indica la unidad de tiempo. Por ejemplo, en el caso de datos cada 10 minutos toma el valor de 10M, para datos horarios toma valor 01H y en caso de los diarios 24H.  <br />
 {plazo} = 3 dígitos para el plazo de pronóstico. En el caso de datos horarios toma valores de 0 a 73 y la unidad del plazo es hora. En el caso de datos diarios toma valores 000, 001, 002 ó 003 y la unidad del plazo es día. 
 
