@@ -1,6 +1,6 @@
 # Campo de temperatura a 2m y líneas de corriente 
 
-(Última actualización 10 abr 2023) <br />
+(Última actualización 10 abr 2023)
 
 Ejemplo para graficar un campo de temperatura a 2m y líneas de corriente. <br />
 *Example to plot a 2-m temperatura and streamlines.*
@@ -8,10 +8,22 @@ Ejemplo para graficar un campo de temperatura a 2m y líneas de corriente. <br /
 Video del tutorial: <br />
 *Tutorial video:* <br />
 <br />
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ad3TSJQPTww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Tutorial:
+
+
+```python
+# En caso de utilizar Google colab, descomentar las siguientes líneas
+
+#!pip install numpy==1.24  
+#!pip install --no-binary shapely shapely --force
+#!pip install h5netcdf
+#!pip install s3fs
+#!pip install cartopy
+#!pip install metpy
+```
+
 
 ```python
 # Importamos las librerías necesarias  (en caso de ser necesario, instalar utilizando el comando pip install)
@@ -77,11 +89,9 @@ Generamos la figura: <br />
 ```python
 # Seleccionamos la proyección de los datos
 # We chose a map projection
-
-projection = ccrs.LambertConformal(ds['Lambert_Conformal'].attrs['longitude_of_central_meridian'], 
-                                   ds['Lambert_Conformal'].attrs['latitude_of_projection_origin'], 
-                                   standard_parallels = ds['Lambert_Conformal'].attrs['standard_parallel'], 
-                                   cutoff = -5)
+projection = ccrs.LambertConformal(central_longitude = ds['Lambert_Conformal'].attrs['longitude_of_central_meridian'], 
+                                 central_latitude = ds['Lambert_Conformal'].attrs['latitude_of_projection_origin'], 
+                                 standard_parallels = ds['Lambert_Conformal'].attrs['standard_parallel'], cutoff = -5)
 
 fig, ax = plt.subplots(1, 1, figsize = (7, 10), constrained_layout = True, subplot_kw = {'projection': projection})
 ax.set_extent(extents=[-500*4000, 500*4000, -600*4000, 600*4000], crs = projection)
@@ -104,7 +114,3 @@ plt.show()
 
 Para descargar la notebook, acceder al siguiente [link](../notebooks/T2m_streamlines.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/T2m_streamlines.ipynb).*
-
-
-
-
