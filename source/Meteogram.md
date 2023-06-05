@@ -1,6 +1,6 @@
 # Meteograma
 
-(Última actualización 1 jun 2023)<br />
+(Última actualización 1 jun 2023)
 
 En este ejemplo discribimos como hacer una figura que muestre la evolución de la temperatura a 2 m y la precipitación horaria en todos los plazos de pronóstico para una latitud y longitud determinada.<br />
 *In this example we describe how to plot the hourly evolution of 2-m temperature and precipitation for a given place.*
@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 Definimos la fecha de inicialización del pronóstico y la latitud y longitud a consultar:<br />
 *We define the forecast initialization date, latitude and longitude of interest:*
 
+
 ```python
 init_year = 2022
 init_month = 4
@@ -33,8 +34,8 @@ longitude = -50
 Leemos los pronósticos: <br />
 *We read the forecast:*
 
-```python
 
+```python
 # Descomentar la opción elegida:
 
 # --------
@@ -55,14 +56,12 @@ Leemos los pronósticos: <br />
 # --------
 # Opción 2: Para abrir los archivos ya descargados
 # Option 2: To open the already downloaded files
-files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) for lead_time in range(0, 73)]
-ds_list = []
-for file in files:
-    print(file)
-    ds_tmp = xr.open_dataset(file, decode_coords = 'all', engine = 'h5netcdf')
-    ds_list.append(ds_tmp)
-# --------
-
+#files = ['WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc'.format(INIT_DATE,lead_time) for lead_time in range(0, 73)]
+#ds_list = []
+#for file in files:
+#    print(file)
+#    ds_tmp = xr.open_dataset(file, decode_coords = 'all', engine = 'h5netcdf')
+#    ds_list.append(ds_tmp)
 
 ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 
@@ -70,6 +69,7 @@ ds = xr.combine_by_coords(ds_list, combine_attrs = 'drop_conflicts')
 
 Obtenemos los valores pronosticados en el punto seleccionado:<br />
 *We get the appropriate forecast value:*
+
 
 ```python
 # Buscamos la ubicación del punto más cercano a la latitud y longitud solicitada
@@ -93,6 +93,7 @@ dates = forecast['time'].values
 
 Realizamos la figura:<br /> 
 *We create the plot:*
+
 
 ```python
 # Iniciamos de la figura
