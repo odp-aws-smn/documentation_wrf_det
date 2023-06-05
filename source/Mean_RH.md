@@ -145,7 +145,10 @@ plt.colorbar(cbar)
 ```
 
 
+
 ![png](../figuras/Mean_RH.png)
     
 Para descargar la notebook, acceder al siguiente [link](../notebooks/Mean_RH.ipynb). <br />
 *To download the notebook, go to the following [link](../notebooks/Mean_RH.ipynb).*
+
+
