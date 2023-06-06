@@ -26,10 +26,10 @@ import xesmf as xe
 # Importante: La librería xesmf tiene problemas para instarla en una notebook de Google Colab 
 # Important: The xesmf library has problems when installing it on a Google Colab notebook.
 ```
-
+```python
 Definimos la fecha de inicialización y el plazo de pronóstico a interpolar:<br />
 *We define the forecast initialization date and the desired forecast lead time:*
-
+```
 
 
 ```python
@@ -132,8 +132,7 @@ print(ds_interpolated)
         START_DATE:     2023-04-01 00:00:00
         Conventions:    CF-1.8
         regrid_method:  bilinear
-
-
+```
 
 
 Para descargar la notebook, acceder al siguiente [link](../notebooks/Regrid.ipynb). <br />
