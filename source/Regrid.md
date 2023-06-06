@@ -132,7 +132,6 @@ print(ds_interpolated)
         START_DATE:     2023-04-01 00:00:00
         Conventions:    CF-1.8
         regrid_method:  bilinear
-```
 
 
 Para descargar la notebook, acceder al siguiente [link](../notebooks/Regrid.ipynb). <br />
