@@ -36,7 +36,7 @@ data = fs.get(s3_file)
 ```
 
 **R**<br />
-Para descargar los archivos se utiliza la librería aws.s3. <br />
+Para descargar los archivos se utiliza la librería <a href="https://cran.r-project.org/web/packages/aws.s3/index.html" target="_blank">aws.s3</a>. <br />
 A continuación se muestra, a modo de ejemplo, la descarga de todos los archivos de un día:
 ```R
 library("aws.s3")
