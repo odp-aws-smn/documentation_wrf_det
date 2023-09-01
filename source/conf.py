@@ -27,7 +27,7 @@ show_authors = True
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_rtd_theme', 'myst_parser']
+extensions = ['sphinx_rtd_theme', 'myst_parser', 'nbsphinx']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -49,6 +49,13 @@ source_suffix = {
     '.txt': 'markdown',
     '.md': 'markdown',
 }
+
+nbsphinx_prolog = r"""
+.. note::
+    | Para descargar la notebook, acceder al siguiente `link <https://github.com/fedecutraro/documentation_wrf_det/tree/master/source/{{ env.doc2path(env.docname, base=None) }}>`_
+    | To download the notebook, go to the following `link <https://github.com/fedecutraro/documentation_wrf_det/tree/master/source/{{ env.doc2path(env.docname, base=None) }}>`_
+
+"""
 
 # -- Options for HTML output -------------------------------------------------
 
