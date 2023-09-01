@@ -52,8 +52,8 @@ source_suffix = {
 
 nbsphinx_prolog = r"""
 .. note::
-    | Para descargar la notebook, acceder al siguiente `link <https://github.com/fedecutraro/documentation_wrf_det/tree/master/source/{{ env.doc2path(env.docname, base=None) }}>`_
-    | To download the notebook, go to the following `link <https://github.com/fedecutraro/documentation_wrf_det/tree/master/source/{{ env.doc2path(env.docname, base=None) }}>`_
+    | Para descargar la notebook, acceder al siguiente `link <https://github.com/odp-aws-smn/documentation_wrf_det/tree/master/source/{{ env.doc2path(env.docname, base=None) }}>`_
+    | To download the notebook, go to the following `link <https://github.com/odp-aws-smn/documentation_wrf_det/tree/master/source/{{ env.doc2path(env.docname, base=None) }}>`_
 
 """
 
