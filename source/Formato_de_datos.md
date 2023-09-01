@@ -30,6 +30,7 @@ Las variables presentes en los archivos son las siguientes:
 |ACSWDNB   |Radiación de onda corta entrante (\**)   |J/m2   |float32   |01H   |
 |TSLB   |Temperatura de suelo en la capa 0-10cm  |°C   |float32   |01H   |
 |SMOIS   |Humedad de suelo en la capa 0-10cm  |m3/m3   |float32   |01H   |
+|Freezing_level   |Altura sobre el nivel del mar de la isoterma de 0°C  |m   |float32   |01H   |
 |Tmax   |Temperatura máxima diaria (\*)   |°C   |float32   |24H   |
 |Tmin   |Temperatura mínima diaria (\*)   |°C   |float32   |24H   |
 
