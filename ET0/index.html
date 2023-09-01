@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campo diario de evapotranspiración de referencia &mdash; documentación de Documentación - </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=653e5397"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Preguntas frecuentes" href="../Preguntas_frecuentes/" />
+    <link rel="prev" title="Interpolación a retícula regular" href="../Regrid/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentación
+              <img src="../_static/smn_horizontal_arg-01.jpg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Informacion_general/">Información general</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura_de_datos/">Estructura de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Formato_de_datos/">Formato de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Acceso_a_los_datos/">Acceso a los datos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Tutoriales/">Tutoriales</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Get_lat_lon_fecha/">Pronóstico para una latitud, longitud y fecha determinada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Meteogram/">Meteograma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Mapas/">Mapas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regrid/">Interpolación a retícula regular</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Campo diario de evapotranspiración de referencia</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Preguntas_frecuentes/">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Novedades/">Novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Suscripcion_a_novedades/">Suscripción a novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contacto/">Contacto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../English_version/">English version</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../Tutoriales/">Tutoriales</a></li>
+      <li class="breadcrumb-item active">Campo diario de evapotranspiración de referencia</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ET0.ipynb.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Nota</p>
+<div class="line-block">
+<div class="line">Para descargar la notebook, acceder al siguiente <a class="reference external" href="https://github.com/odp-aws-smn/documentation_wrf_det/tree/master/source/ET0.ipynb">link</a></div>
+<div class="line">To download the notebook, go to the following <a class="reference external" href="https://github.com/odp-aws-smn/documentation_wrf_det/tree/master/source/ET0.ipynb">link</a></div>
+</div>
+</div>
+<section id="Campo-diario-de-evapotranspiración-de-referencia">
+<h1>Campo diario de evapotranspiración de referencia<a class="headerlink" href="#Campo-diario-de-evapotranspiración-de-referencia" title="Enlace permanente a este encabezado"></a></h1>
+<p>(Última actualización 1 sep 2023)</p>
+<div class="line-block">
+<div class="line">Ejemplo para calcular la evapotranspiración de referencia (ET0).</div>
+<div class="line"><em>Example to calculate the reference evapotranspiration(ET0).</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># En caso de utilizar Google Colab, descomentar las siguientes líneas</span>
+<span class="c1"># In case of using Google Colab, uncomment the following lines</span>
+
+<span class="c1">#!pip install --no-binary shapely shapely --force</span>
+<span class="c1">#!pip install h5netcdf</span>
+<span class="c1">#!pip install cartopy</span>
+<span class="c1">#!pip install metpy</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importamos las librerías necesarias</span>
+<span class="c1"># We import the necessary libraries</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">h5netcdf</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
+<span class="kn">import</span> <span class="nn">metpy.constants</span> <span class="k">as</span> <span class="nn">constants</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Definimos la fecha y hora de inicialización del pronóstico:</div>
+<div class="line"><em>We define the forecast initialization date:</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">init_year</span> <span class="o">=</span> <span class="mi">2023</span>
+<span class="n">init_month</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">init_day</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">init_hour</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">INIT_DATE</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">init_year</span><span class="p">,</span> <span class="n">init_month</span><span class="p">,</span> <span class="n">init_day</span><span class="p">,</span> <span class="n">init_hour</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Leemos los archivos para todos los plazos de pronóstico:</div>
+<div class="line"><em>We read the files for all forecast lead times:</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_lead_time</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">end_lead_time</span> <span class="o">=</span> <span class="mi">72</span>
+
+<span class="c1"># Descomentar la opción elegida:</span>
+
+<span class="c1"># --------</span>
+<span class="c1"># Opción 1: Para acceder al archivo online</span>
+<span class="c1"># Option 1: To access files online</span>
+<span class="c1">#!pip install s3fs</span>
+<span class="c1">#import s3fs</span>
+<span class="c1">#fs = s3fs.S3FileSystem(anon=True)</span>
+<span class="c1">#files = [f&#39;smn-ar-wrf/DATA/WRF/DET/{INIT_DATE:%Y/%m/%d/%H}/WRFDETAR_01H_{INIT_DATE:%Y%m%d_%H}_{fhr:03d}.nc&#39; for fhr in range(start_lead_time, end_lead_time)]</span>
+<span class="c1">#ds_list = []</span>
+<span class="c1">#for s3_file in files:</span>
+<span class="c1">#    print(s3_file)</span>
+<span class="c1">#    if fs.exists(s3_file):</span>
+<span class="c1">#        f = fs.open(s3_file)</span>
+<span class="c1">#        ds_tmp = xr.open_dataset(f, decode_coords = &#39;all&#39;, engine = &#39;h5netcdf&#39;)</span>
+<span class="c1">#        ds_list.append(ds_tmp)</span>
+<span class="c1">#    else:</span>
+<span class="c1">#        print(&#39;The file {} does not exist&#39;.format(s3_file))</span>
+<span class="c1"># --------</span>
+
+<span class="c1"># --------</span>
+<span class="c1"># Opción 2: Para abrir los archivos ya descargados</span>
+<span class="c1"># Option 2: To open the already downloaded files</span>
+<span class="c1">#files = [&#39;WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc&#39;.format(INIT_DATE, lead_time) for lead_time in range(start_lead_time, end_lead_time + 1)]</span>
+<span class="c1">#ds_list = []</span>
+<span class="c1">#for filename in files:</span>
+<span class="c1">#    print(filename)</span>
+<span class="c1">#    ds_tmp = xr.open_dataset(filename, decode_coords = &#39;all&#39;, engine = &#39;h5netcdf&#39;)</span>
+<span class="c1">#    ds_list.append(ds_tmp)</span>
+
+<span class="c1"># Combinamos los archivos en un unico dataset</span>
+<span class="c1"># We combine all the files in one dataset</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">combine_by_coords</span><span class="p">(</span><span class="n">ds_list</span><span class="p">,</span> <span class="n">combine_attrs</span> <span class="o">=</span> <span class="s1">&#39;drop_conflicts&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Definimos una función para calcular la evapotranspiracion de referencia diaria usando la <a class="reference external" href="https://www.fao.org/3/x0490e/x0490e06.htm#equation">ecuación FAO Penman-Monteith</a>:</div>
+<div class="line"><em>We define a function to calculate the daily reference evapotranspiration using the</em><a class="reference external" href="https://www.fao.org/3/x0490e/x0490e06.htm#equation">FAO Penman-Monteith equation</a><em>:</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_ET0</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">quantify</span><span class="p">()</span>
+
+    <span class="n">days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[D]&#39;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">days</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="n">ET0_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">days</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+
+        <span class="c1">#Calculamos valores medios diarios de las variables meteorologicas</span>
+        <span class="c1">#We calculate the daily mean meteorological variables</span>
+        <span class="n">ds_mean</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[[</span><span class="s1">&#39;magViento10&#39;</span><span class="p">,</span> <span class="s1">&#39;PSFC&#39;</span><span class="p">,</span> <span class="s1">&#39;T2&#39;</span><span class="p">,</span> <span class="s1">&#39;HR2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">days</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">days</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+        <span class="c1">#Radiacion acumulada durante el dia</span>
+        <span class="c1">#Accumulated radiation during the day</span>
+        <span class="n">lwd_day</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;ACLWDNB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;ACLWDNB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">n</span><span class="p">]))</span> <span class="c1"># Onda larga entrante / Longwave downward</span>
+        <span class="n">lwu_day</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;ACLWUPB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;ACLWUPB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">n</span><span class="p">]))</span> <span class="c1"># Onda larga saliente / Longwave upward</span>
+        <span class="n">swd_day</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;ACSWDNB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;ACSWDNB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">days</span><span class="p">[</span><span class="n">n</span><span class="p">]))</span> <span class="c1"># Onda corta entrante / Shortwave downward</span>
+        <span class="n">swu_day</span> <span class="o">=</span> <span class="mf">0.23</span><span class="o">*</span><span class="n">swd_day</span> <span class="c1"># Onda corta saliente / Shortwave upward</span>
+
+        <span class="c1">#Radiacion neta [MJ/m**2]</span>
+        <span class="c1">#Net radiation [MJ/m**2]</span>
+        <span class="n">rn_day</span> <span class="o">=</span> <span class="p">((</span><span class="n">swd_day</span> <span class="o">-</span> <span class="n">swu_day</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">lwd_day</span> <span class="o">-</span> <span class="n">lwu_day</span><span class="p">))</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="s1">&#39;MJ/m**2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">dequantify</span><span class="p">()</span>
+
+        <span class="c1">#Calculamos la velocidad del viento a 2m [m/s]</span>
+        <span class="c1">#We calculate 2m wind speed [m/s]</span>
+        <span class="n">wind2m_day</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.745</span> <span class="o">*</span> <span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;magViento10&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">dequantify</span><span class="p">()</span>
+
+        <span class="c1">#Calculamos la constante psicrometrica [kPa/°C]</span>
+        <span class="c1">#We calculate the psychrometric constant [kPa/°C]</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="p">((</span><span class="n">constants</span><span class="o">.</span><span class="n">dry_air_spec_heat_press</span> <span class="o">*</span> <span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;PSFC&#39;</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">molecular_weight_ratio</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">water_heat_vaporization</span><span class="p">))</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="s1">&#39;kPa/degC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">dequantify</span><span class="p">()</span>
+
+        <span class="c1">#Calculamos la presion parcial de vapor de saturación [kPa]</span>
+        <span class="c1">#We calculate the vapour pressure of the air at saturation [kPa]</span>
+        <span class="n">es2m_day</span> <span class="o">=</span> <span class="p">(</span><span class="n">mpcalc</span><span class="o">.</span><span class="n">saturation_vapor_pressure</span><span class="p">(</span><span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="s1">&#39;kPa&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">dequantify</span><span class="p">()</span>
+
+        <span class="n">ds_mean</span> <span class="o">=</span> <span class="n">ds_mean</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">dequantify</span><span class="p">()</span>
+
+        <span class="c1">#Calculamos la pendiente de la curva de presión de vapor:</span>
+        <span class="c1">#We calculate the slope of the vapour pressure curve</span>
+        <span class="n">delta_num</span> <span class="o">=</span> <span class="mi">4098</span><span class="o">*</span><span class="mf">0.6108</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">17.27</span><span class="o">*</span><span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mf">237.3</span><span class="p">))</span>
+        <span class="n">delta_den</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mf">237.3</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">delta_num</span><span class="o">/</span><span class="n">delta_den</span>
+
+        <span class="c1">#Calculamos la ET0 [mm/dia]</span>
+        <span class="c1">#We calculate de ET0 [mm/day]</span>
+        <span class="n">ET0_num1</span> <span class="o">=</span> <span class="mf">0.408</span><span class="o">*</span><span class="n">delta</span><span class="o">*</span><span class="p">(</span><span class="n">rn_day</span><span class="p">)</span>
+        <span class="n">ET0_num2</span> <span class="o">=</span> <span class="n">gamma</span> <span class="o">*</span> <span class="p">(</span><span class="mi">900</span><span class="o">/</span><span class="p">(</span><span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;T2&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">273</span><span class="p">))</span><span class="o">*</span><span class="n">wind2m_day</span><span class="o">*</span><span class="n">es2m_day</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ds_mean</span><span class="p">[</span><span class="s1">&#39;HR2&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">ET0_den</span> <span class="o">=</span> <span class="n">delta</span> <span class="o">+</span> <span class="n">gamma</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">0.34</span><span class="o">*</span><span class="n">wind2m_day</span><span class="p">)</span>
+
+        <span class="n">ET0_day</span> <span class="o">=</span> <span class="p">(</span><span class="n">ET0_num1</span> <span class="o">+</span> <span class="n">ET0_num2</span><span class="p">)</span><span class="o">/</span><span class="n">ET0_den</span>
+
+        <span class="c1">#Donde ET0 resulta negativa, reemplazamos por cero</span>
+        <span class="c1">#Where ET0 is negative, we change it by zero</span>
+        <span class="n">ET0_day</span> <span class="o">=</span> <span class="n">ET0_day</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ET0_day</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">ET0_day</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;ET0&#39;</span>
+        <span class="n">ET0_day</span> <span class="o">=</span> <span class="n">ET0_day</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">({</span><span class="s1">&#39;time&#39;</span><span class="p">:[</span><span class="n">day</span><span class="p">]})</span>
+
+        <span class="n">ET0_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ET0_day</span><span class="p">)</span>
+
+    <span class="n">ET0_total</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">ET0_list</span><span class="p">,</span> <span class="n">dim</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ET0_total</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Calculamos la ET0 diaria y graficamos el campo del primer dia:</div>
+<div class="line"><em>We calculate the daily ET0 and plot the first day field:</em></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ET0</span> <span class="o">=</span> <span class="n">calc_ET0</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ET0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">ET0</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">ET0</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">ET0</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;xarray.DataArray &#39;ET0&#39; (time: 3, y: 1249, x: 999)&gt;
+array([[[1.5088633, 1.5132143, 1.4095869, ..., 2.132155 , 2.1326497,
+         2.148784 ],
+        [1.8586245, 1.7998089, 1.7808553, ..., 2.2562513, 2.2513156,
+         2.039669 ],
+        [1.8637698, 1.8004587, 1.7870052, ..., 2.1955142, 2.1815789,
+         2.0429382],
+        ...,
+        [4.83387  , 4.8193235, 4.8054843, ..., 5.779634 , 5.7052574,
+         5.652413 ],
+        [4.842905 , 4.840371 , 4.833255 , ..., 5.796604 , 5.7327604,
+         5.6763706],
+        [4.84976  , 4.8477564, 4.8447657, ..., 5.7560043, 5.7638516,
+         5.7496104]],
+
+       [[1.6991397, 1.6982177, 1.6491075, ..., 1.4275619, 1.4659595,
+         1.4102427],
+        [1.7688186, 1.7902625, 1.7953228, ..., 1.7655959, 1.7632679,
+         1.3559755],
+        [1.7708207, 1.792065 , 1.8047507, ..., 1.7875934, 1.7759477,
+         1.4457896],
+...
+        [4.264168 , 4.466234 , 4.4394145, ..., 5.4323554, 5.3156705,
+         5.3448086],
+        [4.263845 , 4.497948 , 4.515789 , ..., 5.4381967, 5.327081 ,
+         5.328658 ],
+        [4.401255 , 4.380332 , 4.3858075, ..., 5.2771287, 5.335723 ,
+         5.370829 ]],
+
+       [[1.8218285, 1.8230447, 1.8138897, ..., 2.2263365, 2.199836 ,
+         2.1875033],
+        [1.8340664, 1.8581399, 1.8674679, ..., 1.7753291, 1.754859 ,
+         0.7104781],
+        [1.8350779, 1.8582087, 1.868867 , ..., 1.5891689, 1.5744501,
+         0.5838893],
+        ...,
+        [4.4109006, 4.706371 , 4.688888 , ..., 5.3870797, 5.261983 ,
+         5.2725234],
+        [4.5294986, 4.7443376, 4.7301965, ..., 5.386678 , 5.266292 ,
+         5.2651258],
+        [4.823922 , 4.8188915, 4.818117 , ..., 5.27438  , 5.3473697,
+         5.372849 ]]], dtype=float32)
+Coordinates:
+  * time               (time) datetime64[ns] 2023-02-01 2023-02-02 2023-02-03
+    lon                (y, x) float32 -94.33 -94.28 -94.22 ... -48.0 -47.97
+    lat                (y, x) float32 -54.39 -54.4 -54.41 ... -11.65 -11.65
+  * x                  (x) float32 -1.996e+06 -1.992e+06 ... 1.992e+06 1.996e+06
+  * y                  (y) float32 -2.496e+06 -2.492e+06 ... 2.492e+06 2.496e+06
+    Lambert_Conformal  &lt;U1 &#39;&#39;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+&lt;ipython-input-14-3b377cddb4be&gt;:4: UserWarning: The input coordinates to pcolormesh are interpreted as cell centers, but are not monotonically increasing or decreasing. This may lead to incorrectly calculated cell edges, in which case, please supply explicit cell edges to pcolormesh.
+  plt.pcolormesh(ET0[&#39;lon&#39;], ET0[&#39;lat&#39;], ET0.isel(time = 0))
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.colorbar.Colorbar at 0x7a0136f85720&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/ET0_11_3.png" src="../_images/ET0_11_3.png" />
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../Regrid/" class="btn btn-neutral float-left" title="Interpolación a retícula regular" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../Preguntas_frecuentes/" class="btn btn-neutral float-right" title="Preguntas frecuentes" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Servicio Meteorológico Nacional 2022.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

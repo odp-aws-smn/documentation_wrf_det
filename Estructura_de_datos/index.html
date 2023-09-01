@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructura de datos &mdash; documentación de Documentación - </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=653e5397"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Formato de datos" href="../Formato_de_datos/" />
+    <link rel="prev" title="Información general" href="../Informacion_general/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentación
+              <img src="../_static/smn_horizontal_arg-01.jpg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Informacion_general/">Información general</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Estructura de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Formato_de_datos/">Formato de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Acceso_a_los_datos/">Acceso a los datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutoriales/">Tutoriales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preguntas_frecuentes/">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Novedades/">Novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Suscripcion_a_novedades/">Suscripción a novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contacto/">Contacto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../English_version/">English version</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Estructura de datos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Estructura_de_datos.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="estructura-de-datos">
+<h1>Estructura de datos<a class="headerlink" href="#estructura-de-datos" title="Enlace permanente a este encabezado"></a></h1>
+<p>La estructura de directorios y nombres de archivos es la siguiente:</p>
+<p>/DATA/WRF/{esquema}/{año}/{mes}/{día}/{inicialización}/WRFDETAR_{frecuencia}_{año}{mes}{día}_{inicialización}_{plazo}.nc</p>
+<p>donde los campos entre llaves indican: <br />
+{esquema} = 3 letras en mayúsculas que indican el tipo de esquema empleado (DET) <br />
+{año} = 4 dígitos para el año <br />
+{mes} = 2 dígitos para el mes <br />
+{día} = 2 dígitos para el día <br />
+{inicialización} = 2 dígitos para la hora de inicialización del ciclo de pronóstico (00, 06, 12 ó 18) <br />
+{frecuencia} = 2 dígitos para indicar la resolución temporal de los datos y una letra que indica la unidad de tiempo. Por ejemplo, en el caso de datos cada 10 minutos toma el valor de 10M, para datos horarios toma valor 01H y en caso de los diarios 24H.  <br />
+{plazo} = 3 dígitos para el plazo de pronóstico. En el caso de datos horarios toma valores de 0 a 73 y la unidad del plazo es hora. En el caso de datos diarios toma valores 000, 001, 002 ó 003 y la unidad del plazo es día.</p>
+<p>Todas las horas se consideran en relación al «Universal Time Coordinated» (UTC).</p>
+<p>Ejemplos:</p>
+<ul class="simple">
+<li><p>/DATA/WRF/DET/2022/03/14/00/WRFDETAR_10M_20220314_00_012.nc corresponde a los pronósticos inicializados el 14 de marzo de 2022 a las 00 UTC para el plazo 12 horas de las variables con una frecuencia de 10 minutos. Este archivo contiene 6 tiempos cuya validez va desde 12:00UTC hasta 12:50UTC.</p></li>
+<li><p>/DATA/WRF/DET/2022/03/14/00/WRFDETAR_01H_20220314_00_005.nc corresponde a los pronósticos inicializados el 14 de marzo de 2022 a las 00 UTC para el plazo 05 horas de las variables con frecuencia horaria. Este archivo contiene 1 solo tiempo con validez 05:00UTC.</p></li>
+<li><p>/DATA/WRF/DET/2022/03/14/00/WRFDETAR_24H_20220314_00_001.nc corresponde a los pronósticos inicializados el 14 de marzo de 2022 a las 00 UTC para el plazo 01 día de las variables con frecuencia diaria. Este archivo contiene 1 solo tiempo con validez 15 de marzo de 2022.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../Informacion_general/" class="btn btn-neutral float-left" title="Información general" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../Formato_de_datos/" class="btn btn-neutral float-right" title="Formato de datos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Servicio Meteorológico Nacional 2022.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

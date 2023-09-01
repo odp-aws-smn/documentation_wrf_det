@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formato de datos &mdash; documentación de Documentación - </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Acceso a los datos" href="../Acceso_a_los_datos/" />
+    <link rel="prev" title="Estructura de datos" href="../Estructura_de_datos/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> Documentación
+            <img src="../_static/smn_horizontal_arg-01.jpg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Informacion_general/">Información general</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura_de_datos/">Estructura de datos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Formato de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Acceso_a_los_datos/">Acceso a los datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutoriales/">Tutoriales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preguntas_frecuentes/">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Novedades/">Novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contacto/">Contacto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../English_version/">English version</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Formato de datos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Formato_de_datos.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="formato-de-datos">
+<h1>Formato de datos<a class="headerlink" href="#formato-de-datos" title="Enlace permanente a este encabezado"></a></h1>
+<p>El formato de los archivos es <strong>NetCDF</strong> (de sus siglas en inglés Network Common Data Form). Este es un formato destinado a almacenar datos científicos multidimensionales (variables) como puede ser la temperatura y la humedad. La convención utilizada es la <a href="http://cfconventions.org/" target="_blank">CF</a>. Para más información sobre este formato visitar el siguiente <a href="https://docs.unidata.ucar.edu/netcdf-c/current/index.html" target="_blank">link</a>.</p>
+<p><strong>Proyección de los datos</strong> <br />
+El tipo de proyección utilizada es la <a href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3/user_guide_V3.9/users_guide_chap3.html" target="_blank"><em>Confome de Lambert</em></a> (retícula no regular). El centro de la retícula se encuentra ubicado en -35° de latitud y -65° de longitud, y la resolución espacial es de 4 km.</p>
+<p><strong>Dimensiones</strong><br />
+Las dimensiones de los datos se encuentra en la siguiente tabla:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dimensión</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>time</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>y</p></td>
+<td><p>1249</p></td>
+</tr>
+<tr class="row-even"><td><p>x</p></td>
+<td><p>999</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variables</strong><br />
+Las variables presentes en los archivos son las siguientes:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Descripción</p></th>
+<th class="head"><p>Unidad</p></th>
+<th class="head"><p>Precisión</p></th>
+<th class="head"><p>Frecuencia</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PP</p></td>
+<td><p>Precipitación acumulada en 10 miuntos</p></td>
+<td><p>mm</p></td>
+<td><p>float32</p></td>
+<td><p>10M</p></td>
+</tr>
+<tr class="row-odd"><td><p>PP</p></td>
+<td><p>Precipitación acumulada en una hora</p></td>
+<td><p>mm</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-even"><td><p>HR2</p></td>
+<td><p>Humedad relativa a 2 metros</p></td>
+<td><p>%</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-odd"><td><p>T2</p></td>
+<td><p>Temperatura a 2 metros (*)</p></td>
+<td><p>°C</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-even"><td><p>dirViento10</p></td>
+<td><p>Dirección del viento a 10 metros</p></td>
+<td><p>°</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-odd"><td><p>magViento10</p></td>
+<td><p>Magnitud del viento a 10 metros (*)</p></td>
+<td><p>m/s</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-even"><td><p>PSFC</p></td>
+<td><p>Presión en superficie</p></td>
+<td><p>hPa</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-odd"><td><p>ACLWDNB</p></td>
+<td><p>Radiación de onda larga entrante (**)</p></td>
+<td><p>J/m2</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-even"><td><p>ACLWUPB</p></td>
+<td><p>Radiación de onda larga saliente (**)</p></td>
+<td><p>J/m2</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-odd"><td><p>ACSWDNB</p></td>
+<td><p>Radiación de onda corta entrante (**)</p></td>
+<td><p>J/m2</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-even"><td><p>TSLB</p></td>
+<td><p>Temperatura de suelo en la capa 0-10cm</p></td>
+<td><p>°C</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-odd"><td><p>SMOIS</p></td>
+<td><p>Humedad de suelo en la capa 0-10cm</p></td>
+<td><p>m3/m3</p></td>
+<td><p>float32</p></td>
+<td><p>01H</p></td>
+</tr>
+<tr class="row-even"><td><p>Tmax</p></td>
+<td><p>Temperatura máxima diaria (*)</p></td>
+<td><p>°C</p></td>
+<td><p>float32</p></td>
+<td><p>24H</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tmin</p></td>
+<td><p>Temperatura mínima diaria (*)</p></td>
+<td><p>°C</p></td>
+<td><p>float32</p></td>
+<td><p>24H</p></td>
+</tr>
+</tbody>
+</table>
+<p>(*) Variables calibradas con observaciones de superficie. Para más información consultar la nota técnica
+<a href="http://repositorio.smn.gob.ar/handle/20.500.12160/1405" target="_blank">Cutraro y otros, 2020</a>. En caso de que no se encuentren disponibles las variables calibradas, se presentará el valor pronosticado sin calibrar.<br />
+(**) Valor acumulado desde el inicio del pronóstico.</p>
+<p>En el caso de la Tmin válida para el día X el valor corresponde a la temperatura mínima pronosticada para el día X entre las 00 y las 12 UTC.
+Para Tmax el valor del día X corresponde a la temperatura máxima pronosticada entre las 12 UTC del día X y las 00 UTC del día X+1.</p>
+<p>Por ejemplo, el archivo WRFDETAR_24H_20220314_00_001.nc que contiene los datos del ciclo 00 UTC para el primer plazo de pronóstico (1° día) tendrá la temperatura mínima pronosticada para el día 20220315 entre las 00 y las 12 UTC y la temperatura máxima pronosticada para el día 20220315 entre las 12 y las 00 UTC del día siguiente.</p>
+<p>Para el caso de la PP válida para el día X en el plazo P, el valor corresponde a la precipitación acumulada pronosticada entre el plazo P-1 y P.</p>
+<p>Por ejemplo, el archivo WRFDETAR_01H_20220314_00_036.nc que contiene los datos del ciclo 00 UTC para el plazo 36 de pronóstico tendrá la precipitación acumulada pronosticada válida para 15 de marzo de 2022 entre las 11 y las 12 UTC. En el caso del archivo WRFDETAR_10M_20220314_00_036.nc contiene los datos de precipitación acumulada cada 10 minutos entre las 11 y 12 UTC.</p>
+<p><strong>Variables de coordenadas:</strong><br />
+Las variables de coordenas presentes en los archivos son las siguientes:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Descripción</p></th>
+<th class="head"><p>Unidad</p></th>
+<th class="head"><p>Precisión</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>time</p></td>
+<td><p>Tiempo</p></td>
+<td><p>Horas desde el inicio del ciclo de pronóstico</p></td>
+<td><p>float64</p></td>
+</tr>
+<tr class="row-odd"><td><p>y</p></td>
+<td><p>Coordenada y</p></td>
+<td><p>Metros desde el centro de la retícula</p></td>
+<td><p>float32</p></td>
+</tr>
+<tr class="row-even"><td><p>x</p></td>
+<td><p>Coordenada x</p></td>
+<td><p>Metros desde el centro de la retícula</p></td>
+<td><p>float32</p></td>
+</tr>
+<tr class="row-odd"><td><p>lat</p></td>
+<td><p>Latitud</p></td>
+<td><p>° (convención entre 90° y -90°)</p></td>
+<td><p>float32</p></td>
+</tr>
+<tr class="row-even"><td><p>lon</p></td>
+<td><p>Longitud</p></td>
+<td><p>° (convención entre -180° y 180°)</p></td>
+<td><p>float32</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../Estructura_de_datos/" class="btn btn-neutral float-left" title="Estructura de datos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../Acceso_a_los_datos/" class="btn btn-neutral float-right" title="Acceso a los datos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Servicio Meteorológico Nacional 2022.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpolación a retícula regular &mdash; documentación de Documentación - </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=653e5397"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Campo diario de evapotranspiración de referencia" href="../ET0/" />
+    <link rel="prev" title="Campo de temperatura a 2m y líneas de corriente" href="../T2m_streamlines/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Documentación
+              <img src="../_static/smn_horizontal_arg-01.jpg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Informacion_general/">Información general</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura_de_datos/">Estructura de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Formato_de_datos/">Formato de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Acceso_a_los_datos/">Acceso a los datos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Tutoriales/">Tutoriales</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Get_lat_lon_fecha/">Pronóstico para una latitud, longitud y fecha determinada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Meteogram/">Meteograma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Mapas/">Mapas</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interpolación a retícula regular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ET0/">Campo diario de evapotranspiración de referencia</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Preguntas_frecuentes/">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Novedades/">Novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Suscripcion_a_novedades/">Suscripción a novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contacto/">Contacto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../English_version/">English version</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../Tutoriales/">Tutoriales</a></li>
+      <li class="breadcrumb-item active">Interpolación a retícula regular</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Regrid.ipynb.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">Nota</p>
+<div class="line-block">
+<div class="line">Para descargar la notebook, acceder al siguiente <a class="reference external" href="https://github.com/odp-aws-smn/documentation_wrf_det/tree/master/source/Regrid.ipynb">link</a></div>
+<div class="line">To download the notebook, go to the following <a class="reference external" href="https://github.com/odp-aws-smn/documentation_wrf_det/tree/master/source/Regrid.ipynb">link</a></div>
+</div>
+</div>
+<section id="Interpolación-a-retícula-regular">
+<h1>Interpolación a retícula regular<a class="headerlink" href="#Interpolación-a-retícula-regular" title="Enlace permanente a este encabezado"></a></h1>
+<p>(Última actualización 1 sep 2023)</p>
+<div class="line-block">
+<div class="line">En esta notebook mostramos cómo transformar los datos que se encuentran en la proyección Conforme de Lambert a una proyección cilíndrica de modo que queden en una retícula regular.</div>
+<div class="line"><em>We show an example of how to transform a dataset that is in a Lambert conformal projection to a regular grid (equirectangular projection).</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># En caso de utilizar Google Colab, descomentar las siguientes líneas
+# In case of using Google Colab, uncomment the following lines
+
+#!pip install -q condacolab
+#import condacolab
+#condacolab.install()
+#!conda install -c conda-forge xesmf &quot;esmpy&lt;8.4&quot;
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Importamos las librerías necesarias
+# We import the necesssary libraries
+import xarray as xr
+import h5netcdf
+import datetime
+import xesmf as xe
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Definimos la fecha de inicialización y el plazo de pronóstico a interpolar:</div>
+<div class="line"><em>We define the forecast initialization date and the desired forecast lead time:</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>init_year = 2022
+init_month = 4
+init_day = 1
+init_hour = 0
+INIT_DATE = datetime.datetime(init_year, init_month, init_day, init_hour)
+
+lead_time = 12
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Leemos el archivo que posee el dato buscado:</div>
+<div class="line"><em>We read the file containing the information we are looking for:</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Descomentar la opción elegida:
+
+# --------
+# Opción 1: Para acceder a los archivos online
+# Option 1: To access files online
+#! pip install s3fs
+#import s3fs
+#s3_file = f&#39;smn-ar-wrf/DATA/WRF/DET/{INIT_DATE:%Y/%m/%d/%H}/WRFDETAR_01H_{INIT_DATE:%Y%m%d_%H}_{lead_time:03d}.nc&#39;
+#fs = s3fs.S3FileSystem(anon=True)
+#if fs.exists(s3_file):
+#    f = fs.open(s3_file)
+#    ds = xr.open_dataset(f, decode_coords = &#39;all&#39;, engine = &#39;h5netcdf&#39;)
+#else:
+#    print(&#39;The file does not exist&#39;)
+# --------
+
+# --------
+# Opción 2: Para abrir un archivo ya descargado
+# Option 2: To open an already downloaded file
+#filename = &#39;WRFDETAR_01H_{:%Y%m%d_%H}_{:03d}.nc&#39;.format(INIT_DATE,lead_time)
+#ds = xr.open_dataset(filename, decode_coords = &#39;all&#39;, engine = &#39;h5netcdf&#39;)
+# --------
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Definimos la nueva retícula a la que se quiere interpolar:</div>
+<div class="line"><em>We define the target regular grid:</em></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>resolution_lat = 0.1
+resolution_lon = 0.1
+lat_min = -56
+lat_max = -19
+lon_min = -76
+lon_max = -48
+
+new_grid = xe.util.grid_2d(lon_min - resolution_lon/2, lon_max, resolution_lon,
+                           lat_min - resolution_lat/2, lat_max, resolution_lat)
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Realizamos la interpolación:</div>
+<div class="line"><em>We performe the interpolation:</em></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>regridder = xe.Regridder(ds, new_grid, &#39;bilinear&#39;)
+ds_interpolated = regridder(ds, keep_attrs = True)
+print(ds_interpolated)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;xarray.Dataset&gt;
+Dimensions:            (time: 1, y: 370, x: 280)
+Coordinates:
+    Lambert_Conformal  float32 ...
+  * time               (time) datetime64[ns] 2022-04-01T12:00:00
+    lat                (y, x) float64 -56.0 -56.0 -56.0 ... -19.1 -19.1 -19.1
+    lon                (y, x) float64 -76.0 -75.9 -75.8 ... -48.3 -48.2 -48.1
+Dimensions without coordinates: y, x
+Data variables:
+    PP                 (time, y, x) float32 0.001074 0.001887 ... 0.0 0.0
+    T2                 (time, y, x) float32 5.486 5.433 5.269 ... 23.87 22.85
+    HR2                (time, y, x) float32 85.47 86.79 87.88 ... 62.78 66.72
+    dirViento10        (time, y, x) float32 290.7 290.4 289.0 ... 91.19 96.44
+    magViento10        (time, y, x) float32 12.31 11.37 10.67 ... 5.078 4.127
+Attributes: (12/20)
+    title:          Python PostProcessing for SMN WRF-ARW Deterministic SFC
+    institution:    Servicio Meteorologico Nacional
+    source:          OUTPUT FROM WRF V4.0 MODEL
+    start_lat:      -54.386837
+    start_lon:      -94.33081
+    end_lat:        -11.645958
+    ...             ...
+    DX:             4000.0
+    DY:             4000.0
+    START_DATE:     2022-04-01_00:00:00
+    Conventions:    CF-1.8
+    NCO:            netCDF Operators version 4.7.5 (Homepage = http://nco.sf....
+    regrid_method:  bilinear
+</pre></div></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../T2m_streamlines/" class="btn btn-neutral float-left" title="Campo de temperatura a 2m y líneas de corriente" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../ET0/" class="btn btn-neutral float-right" title="Campo diario de evapotranspiración de referencia" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Servicio Meteorológico Nacional 2022.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

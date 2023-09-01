@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campo de humedad relativa media diaria &mdash; documentación de Documentación - </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Campo de temperatura a 2m y líneas de corriente" href="../T2m_streamlines/" />
+    <link rel="prev" title="Mapas" href="../Mapas/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> Documentación
+            <img src="../_static/smn_horizontal_arg-01.jpg" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Informacion_general/">Información general</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura_de_datos/">Estructura de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Formato_de_datos/">Formato de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Acceso_a_los_datos/">Acceso a los datos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Tutoriales/">Tutoriales</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Get_lat_lon_fecha/">Pronóstico para una latitud, longitud y fecha determinada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Meteogram/">Meteograma</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Mapas/">Mapas</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Campo de humedad relativa media diaria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../T2m_streamlines/">Campo de temperatura a 2m y líneas de corriente</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Regrid/">Interpolación a retícula regular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ET0/">Campo diario de evapotranspiración de referencia</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Preguntas_frecuentes/">Preguntas frecuentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Novedades/">Novedades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Contacto/">Contacto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../English_version/">English version</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Documentación</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../Tutoriales/">Tutoriales</a></li>
+          <li class="breadcrumb-item"><a href="../Mapas/">Mapas</a></li>
+      <li class="breadcrumb-item active">Campo de humedad relativa media diaria</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Mean_RH.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="campo-de-humedad-relativa-media-diaria">
+<h1>Campo de humedad relativa media diaria<a class="headerlink" href="#campo-de-humedad-relativa-media-diaria" title="Enlace permanente a este encabezado"></a></h1>
+<p>Ejemplo para el cálculo de la humedad relativa media en una subregión. <br />
+<em>Example of the mean relative humidity field over a user-defined subregion.</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importamos las librerías necesarias  (en caso de ser necesario, instalar utilizando el comando pip install)</span>
+<span class="c1"># We import the necessary libraries    (if needed, install by using the command pip install)</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">h5netcdf</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">s3fs</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cf</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">regionmask</span>
+</pre></div>
+</div>
+<p>Definimos la fecha y hora de inicialización del pronóstico: <br />
+<em>We define the forecast initialization date:</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">init_year</span> <span class="o">=</span> <span class="mi">2022</span>
+<span class="n">init_month</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">init_day</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">init_hour</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">INIT_DATE</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">init_year</span><span class="p">,</span> <span class="n">init_month</span><span class="p">,</span> <span class="n">init_day</span><span class="p">,</span> <span class="n">init_hour</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Definimos el periodo de tiempo sobre el cual se calcula la humedad relativa media: <br />
+<em>We define the averaging period for relative humidity:</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_lead_time</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">end_lead_time</span> <span class="o">=</span> <span class="mi">47</span>
+</pre></div>
+</div>
+<p>Definimos la región a graficar: <br />
+<em>We define the region of interest (using lat and lon):</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lat_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">60</span>
+<span class="n">lat_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">30</span>
+<span class="n">lon_min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">80</span>
+<span class="n">lon_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">60</span>
+</pre></div>
+</div>
+<p>Leemos los pronósticos: <br />
+<em>We read the forecasts:</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Opción 1: Para acceder al archivo online</span>
+<span class="c1"># Option 1: To access files online</span>
+<span class="c1">#fs = s3fs.S3FileSystem(anon=True)</span>
+
+<span class="c1">#files = [f&#39;smn-ar-wrf/DATA/WRF/DET/{FCST_DATE:%Y/%m/%d/%H}/WRFDETAR_01H_{FCST_DATE:%Y%m%d_%H}_{fhr:03d}.nc&#39; for fhr in range(start_fhr, final_fhr)]</span>
+<span class="c1">#ds_list = []</span>
+<span class="c1">#for s3_file in files:</span>
+<span class="c1">#    print(s3_file)</span>
+<span class="c1">#    if fs.exists(s3_file):</span>
+<span class="c1">#        f = fs.open(s3_file)</span>
+<span class="c1">#        ds_tmp = xr.open_dataset(f, decode_coords = &#39;all&#39;, engine = &#39;h5netcdf&#39;)</span>
+<span class="c1">#        ds_list.append(ds_tmp)</span>
+<span class="c1">#    else:</span>
+<span class="c1">#        print(&#39;The file {} does not exist&#39;.format(s3_file))</span>
+
+<span class="c1"># Opción 2: Para abrir los archivos ya descargados</span>
+<span class="c1"># Option 2: To open the already downloaded files</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;WRFDETAR_01H_{:%Y%m</span><span class="si">%d</span><span class="s1">_%H}_</span><span class="si">{:03d}</span><span class="s1">.nc&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">INIT_DATE</span><span class="p">,</span><span class="n">lead_time</span><span class="p">)</span> <span class="k">for</span> <span class="n">lead_time</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_lead_time</span><span class="p">,</span> <span class="n">end_lead_time</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+<span class="n">ds_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">ds_tmp</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">decode_coords</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">engine</span> <span class="o">=</span> <span class="s1">&#39;h5netcdf&#39;</span><span class="p">)</span>
+    <span class="n">ds_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ds_tmp</span><span class="p">)</span>
+
+<span class="c1"># Combinamos los archivos en un unico dataset</span>
+<span class="c1"># We combine all the files in one dataset</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">combine_by_coords</span><span class="p">(</span><span class="n">ds_list</span><span class="p">,</span> <span class="n">combine_attrs</span> <span class="o">=</span> <span class="s1">&#39;drop_conflicts&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Seleccionamos los datos pertenecientes a la región y se calcula la humedad relativa media diaria: <br />
+<em>We select the data of the chose subdomain and we compute the mean value:</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">corners</span> <span class="o">=</span> <span class="p">[[</span><span class="n">lon_min</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">],</span> <span class="p">[</span><span class="n">lon_min</span><span class="p">,</span> <span class="n">lat_max</span><span class="p">],</span> <span class="p">[</span><span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_max</span><span class="p">],</span> <span class="p">[</span><span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">]]</span>
+
+<span class="c1"># Armamos la máscara de la región</span>
+<span class="c1"># We build the mask defining the region  </span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">regionmask</span><span class="o">.</span><span class="n">Regions</span><span class="p">([</span><span class="n">corners</span><span class="p">])</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">])</span>
+
+<span class="c1"># Seleccionamos la variable HR2 y se calcula el valor medio diario</span>
+<span class="c1"># We select the variable HR2 and compute the daily mean at each gridpoint</span>
+<span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;HR2&#39;</span>
+<span class="n">HR</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[[</span><span class="n">var</span><span class="p">]]</span>
+<span class="n">HR_mean</span> <span class="o">=</span> <span class="n">HR</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+<span class="c1"># Aplicamos la máscara eliminando los valores por fuera de ésta</span>
+<span class="c1"># We eliminate the values outside the mask </span>
+<span class="n">HR_region</span> <span class="o">=</span> <span class="n">HR_mean</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Generamos la figura: <br />
+<em>We generate the plot:</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Seleccionamos la proyección de los datos</span>
+<span class="c1"># We chose a map projection</span>
+<span class="n">proyection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_longitude</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">CEN_LON</span><span class="p">,</span> 
+                                   <span class="n">central_latitude</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">CEN_LAT</span><span class="p">,</span> 
+                                   <span class="n">standard_parallels</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">TRUELAT1</span><span class="p">,</span> 
+                                                         <span class="n">ds</span><span class="o">.</span><span class="n">TRUELAT2</span><span class="p">))</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> 
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span> <span class="o">=</span> <span class="n">proyection</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">HR_region</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">],</span> <span class="n">HR_region</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">HR_region</span><span class="p">[</span><span class="s1">&#39;HR2&#39;</span><span class="p">],</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">)</span> <span class="c1"># add coastlines</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">)</span>   <span class="c1"># add country borders</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Mean Relative Humidity [%]&#39;</span><span class="p">)</span>
+
+<span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">draw_labels</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                  <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">gl</span><span class="o">.</span><span class="n">top_labels</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">gl</span><span class="o">.</span><span class="n">right_labels</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cbar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="png" src="../_images/Mean_RH.png" /></p>
+<p>Para descargar la notebook, acceder al siguiente <a class="reference download internal" download="" href="../_downloads/c8ee729ed471217d62afc125a5cf70f0/Mean_RH.ipynb"><span class="xref download myst">link</span></a>. <br />
+<em>To download the notebook, go to the following <a class="reference download internal" download="" href="../_downloads/c8ee729ed471217d62afc125a5cf70f0/Mean_RH.ipynb"><span class="xref download myst">link</span></a>.</em></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../Mapas/" class="btn btn-neutral float-left" title="Mapas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../T2m_streamlines/" class="btn btn-neutral float-right" title="Campo de temperatura a 2m y líneas de corriente" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor Servicio Meteorológico Nacional 2022.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
